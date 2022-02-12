@@ -20,20 +20,22 @@ author_profile: true
 
 ### Position papers
 
-- Cansu Ekmekcioglu, Negin Dahya, Laurie Decarpentrie, Olivier Arvisais. (2021).*Time, Temporality and Technology in Remote Participatory Research: Implications for HCI Research in Forced Migration*. In CHI 2021 Migration and Mobilities in HCI: Rethinking Boundaries, Methods, and Impact.[link](http://www.cs.toronto.edu/~dsabie/MigrationWorkshop/Submissions/Ekmekcioglu-et-al_2021.pdf)
+- Cansu Ekmekcioglu, Negin Dahya, Laurie Decarpentrie, Olivier Arvisais. (2021).*Time, Temporality and Technology in Remote Participatory Research: Implications for HCI Research in Forced Migration*. In CHI 2021 Migration and Mobilities in HCI: Rethinking Boundaries, Methods, and Impact.[Link](http://www.cs.toronto.edu/~dsabie/MigrationWorkshop/Submissions/Ekmekcioglu-et-al_2021.pdf)
+- Cansu Ekmekcioglu. (2020). *Humanitarian Innovation and AI Ethics: Implications for Refugee Settings*. In Ethical Innovation for Artificial Intelligence. [WEB](https://ei4ai.wordpress.com/2020/10/19/humanitarian-innovation-and-ai-ethics-implications-for-refugee-settings-by-cansu-e-dedeoglu-faculty-of-information-university-of-toronto/)
 
-### Reports
+### Policy Reports
 
 - Jingzhou (Jo) Liu, Cansu Ekmekcioglu, Marco Campana. (2021). *From Silos to Solutions: Toward Sustainable and Equitable Hybrid Service Delivery in the Immigrant & Refugee-Serving Sector in Canada*. Settlement Sector and Technology Task Group. [https://www.amssa.org/wp-content/uploads/2021/05/EN-Settlement-Sector-Technology-Task-Group-final-report-and-recommen....pdf](https://www.amssa.org/wp-content/uploads/2021/05/EN-Settlement-Sector-Technology-Task-Group-final-report-and-recommen....pdf)   
 
+### Scientific Communication
+
+- Negin Dahya, Cansu Ekmekcioglu, Laurie Decarpentrie, Olivier Arvisais. (2021). *In refugee camps, access to internet supports research during the coronavirus pandemic* [WEB](https://theconversation.com/in-refugee-camps-access-to-internet-supports-research-during-the-coronavirus-pandemic-146468) 
 
 ### News Articles, Public Writing and Essays 
 
 - Negin Dahya, Cansu Ekmekcioglu, Laurie Decarpentrie, Olivier Arvisais. (2021). *In refugee camps, access to internet supports research during the coronavirus pandemic* [WEB](https://theconversation.com/in-refugee-camps-access-to-internet-supports-research-during-the-coronavirus-pandemic-146468)  
-
-- Cansu Ekmekcioglu. (2020). *Humanitarian Innovation and AI Ethics: Implications for Refugee Settings*. In Ethical Innovation for Artificial Intelligence. [WEB](https://ei4ai.wordpress.com/2020/10/19/humanitarian-innovation-and-ai-ethics-implications-for-refugee-settings-by-cansu-e-dedeoglu-faculty-of-information-university-of-toronto/)
-
 - Cansu Ekmekcioglu. (2019). *Creative Methods of Dissemination in Forced Migration Research*. In ESPMI Network. [WEB](https://espminetwork.com/cansu-e-dedoglu-dissemination-methods/)
+- Cansu Ekmekcioglu. (2009). Drôle de changement de season Turquie. In Café Babel. [WEB](https://cafebabel.com/fr/article/drole-de-changement-de-saison-turque-5ae0059df723b35a145df023/)
 
 
 <!---
