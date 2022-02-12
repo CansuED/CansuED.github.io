@@ -20,7 +20,7 @@ author_profile: true
 
 ### Position papers
 
-- Cansu Ekmekcioglu, Negin Dahya, Laurie Decarpentrie, Olivier Arvisais. (2021).*Time, Temporality and Technology in Remote Participatory Research: Implications for HCI Research in Forced Migration*. In CHI 2021 Migration and Mobilities in HCI: Rethinking Boundaries, Methods, and Impact.[link](http://www.cs.toronto.edu/~dsabie/MigrationWorkshop/Submissions/Dedeoglu_TTT_Remote%20Participatory%20Research_CHI2021Workshop.pdf)
+- Cansu Ekmekcioglu, Negin Dahya, Laurie Decarpentrie, Olivier Arvisais. (2021).*Time, Temporality and Technology in Remote Participatory Research: Implications for HCI Research in Forced Migration*. In CHI 2021 Migration and Mobilities in HCI: Rethinking Boundaries, Methods, and Impact.[link](http://www.cs.toronto.edu/~dsabie/MigrationWorkshop/Submissions/Ekmekcioglu-et-al_2021.pdf)
 
 ### Reports
 
