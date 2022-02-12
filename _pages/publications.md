@@ -33,7 +33,6 @@ author_profile: true
 
 ### News Articles, Public Writing and Essays 
 
-- Negin Dahya, Cansu Ekmekcioglu, Laurie Decarpentrie, Olivier Arvisais. (2021). *In refugee camps, access to internet supports research during the coronavirus pandemic* [WEB](https://theconversation.com/in-refugee-camps-access-to-internet-supports-research-during-the-coronavirus-pandemic-146468)  
 - Cansu Ekmekcioglu. (2019). *Creative Methods of Dissemination in Forced Migration Research*. In ESPMI Network. [WEB](https://espminetwork.com/cansu-e-dedoglu-dissemination-methods/)
 - Cansu Ekmekcioglu. (2009). Drôle de changement de season Turquie. In Café Babel. [WEB](https://cafebabel.com/fr/article/drole-de-changement-de-saison-turque-5ae0059df723b35a145df023/)
 
