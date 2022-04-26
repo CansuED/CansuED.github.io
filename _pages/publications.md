@@ -1,3 +1,4 @@
+[chi21.pdf](https://github.com/CansuED/CansuED.github.io/files/8567355/chi21.pdf)
 ---
 layout: archive
 title: "Publications"
@@ -20,7 +21,7 @@ author_profile: true
 
 - Chang, S., McKay, D., Caidi, N., Mendoza, A., Gomes, C., Ekmekcioglu, C. (2021). "From way across the sea:~Information overload and international students during the COVID-19 pandemic". In *Proceedings of Association of Information Science and Technology*. [https://doi.org/10.1002/pra2.289](https://asistdl.onlinelibrary.wiley.com/doi/10.1002/pra2.289)
 
-- Sabie, D., Sabie, S., Ekmekcioglu, C., Rohanifar, Y., Hashim, F., Easterbrook, S., Ahmed, I. (2019). "Exile Within Borders:~Understanding the Limits of the Internally Displaced People (IDPs) in Iraq." In *Proceedings of the 2019 Workshop on Computing within Limits (LIMITS'19), Lappeenranta, Finland*. [https://doi.org/10.1145/3338103.3338104](https://doi.org/10.1145/3338103.3338104)
+- Sabie, D., Sabie, S., Ekmekcioglu, C., Rohanifar, Y., Hashim, F., Easterbrook, S., Ahmed, I. (2019). "Exile Within Borders: Understanding the Limits of the Internally Displaced People (IDPs) in Iraq." In *Proceedings of the 2019 Workshop on Computing within Limits (LIMITS'19), Lappeenranta, Finland*. [https://doi.org/10.1145/3338103.3338104](https://doi.org/10.1145/3338103.3338104)
 
 
 
