@@ -10,15 +10,15 @@ author_profile: true
 ### Journal articles
 
 - Sabie, D., Ekmekcioglu, C., Ahmed, I. (2022). "A Decade of International Migration Research in HCI: Overview, Challenges, Ethics, Impact, and Future Directions". In *ACM Transactions on Computer-Human Interaction (ToCHI)*. Vol.29, No:4.[https://dl.acm.org/doi/abs/10.1145/3490555](https://dl.acm.org/doi/abs/10.1145/3490555)
-- Cagdas Dedeoglu, Cansu Ekmekcioglu. (2020). *Information Infrastructures and the Future of Ecological Citizenship in the Anthropocene*. Social Sciences. 9(1).  [https://doi.org/10.3390/socsci9010003](https://doi.org/10.3390/socsci9010003) 
+- Dedeoglu, C., Ekmekcioglu, C. (2020). "Information Infrastructures and the Future of Ecological Citizenship in the Anthropocene". *Social Sciences*. 9(1).  [https://doi.org/10.3390/socsci9010003](https://doi.org/10.3390/socsci9010003) 
 
 
 
-### Peer-reviewed proceedings
+### Peer-reviewed conference proceedings
 
-- Dina Sabie, Reem Talhouk, Cansu Ekmekcioglu, Carleen Maitland, Volker Wulf, Eiad Yafi, Samar Sabie, Asam Almohamed, Safa'a AbuJarour, Kahina Le Louvier, Faheem Hussain, Syed Ishtiaque Ahmed. (2021). *Migration and Mobility in HCI: Rethinking Boundaries, Methods, and Impact*. In CHI EA '21:Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems, May 2021.[https://doi.org/10.1145/3411763.3441352](https://doi.org/10.1145/3411763.3441352) 
+- Sabie, D., Talhouk, R., Ekmekcioglu, C., Maitland, C., Wulf, V., Yafi, E., Sabie, S., Almohamaed, A., AbuJarour, S., Le Louvier, K., Hussain, F., Ahmed, I. (2021). "Migration and Mobility in HCI: Rethinking Boundaries, Methods, and Impact". *CHI EA'21:~Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems*.[https://doi.org/10.1145/3411763.3441352](https://doi.org/10.1145/3411763.3441352) 
 
-- Shanton Chang, Dana McKay, Nadia Caidi, Antonette Mendoza, Catherine Gomes, Cansu Ekmekcioglu. (2020). *From way across the sea: Information overload and international students during the COVID‐19 pandemic*. In Proceedings of the Association for Information Science and Technology. [https://doi.org/10.1002/pra2.289](https://asistdl.onlinelibrary.wiley.com/doi/10.1002/pra2.289)
+- Chang, S., McKay, D., Caidi, N., Mendoza, A., Gomes, C., Ekmekcioglu, C. (2021). "From way across the sea:~Information overload and international students during the COVID-19 pandemic". In *Proceedings of Association of Information Science and Technology*. [https://doi.org/10.1002/pra2.289](https://asistdl.onlinelibrary.wiley.com/doi/10.1002/pra2.289)
 
 - Dina Sabie, Samar Sabie, Cansu Ekmekcioglu, Yasaman Rohanifar, Fatma Hashim, Steve Easterbrook, and Syed Ishtiaque Ahmed. (2019). *Exile Within Borders: Understanding the Limits of the Internally Displaced People (IDPs) in Iraq*. In Proceedings of the 2019 Workshop on Computing within Limits (LIMITS'19), Lappeenranta, Finland. [https://doi.org/10.1145/3338103.3338104](https://doi.org/10.1145/3338103.3338104)
 
