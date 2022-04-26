@@ -16,6 +16,8 @@ author_profile: true
 
 ### Peer-reviewed conference proceedings
 
+- Caidi, N., Ekmekcioglu, C., Jamali, R., Chandra, P. (2022). "Socially-Distant Fasting: Information Practices of Young Muslims During Pandemic" In *ISIC 2022* 
+- Dahya, N., Ekmekcioglu, C., Arvisais, O., Decarpentrie, L. (2021). "Learning In/Dependently in Refugee Camps: Community-based Perspectives on Teaching, Learning, and Technology'". In *AoIR Selected Papers of Internet Research.* [10.5210/spir.v2021i0.12158](10.5210/spir.v2021i0.12158) 
 - Sabie, D., Talhouk, R., Ekmekcioglu, C., Maitland, C., Wulf, V., Yafi, E., Sabie, S., Almohamaed, A., AbuJarour, S., Le Louvier, K., Hussain, F., Ahmed, I. (2021). "Migration and Mobility in HCI: Rethinking Boundaries, Methods, and Impact". *CHI EA'21:~Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems*.[https://doi.org/10.1145/3411763.3441352](https://doi.org/10.1145/3411763.3441352) 
 
 - Chang, S., McKay, D., Caidi, N., Mendoza, A., Gomes, C., Ekmekcioglu, C. (2021). "From way across the sea:~Information overload and international students during the COVID-19 pandemic". In *Proceedings of Association of Information Science and Technology*. [https://doi.org/10.1002/pra2.289](https://asistdl.onlinelibrary.wiley.com/doi/10.1002/pra2.289)
