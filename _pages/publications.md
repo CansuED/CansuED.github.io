@@ -1,4 +1,4 @@
-[chi21.pdf](https://github.com/CansuED/CansuED.github.io/files/8567355/chi21.pdf)
+
 ---
 layout: archive
 title: "Publications"
