@@ -32,8 +32,8 @@ author_profile: true
 
 ### Policy Reports
 
-- 
-- Lui, JL., Ekmekcioglu, C., Campana, M.  (2021). "From Silos to Solutions: Toward Sustainable and Equitable Hybrid Service Delivery in the Immigrant & Refugee-Serving Sector in Canada". Settlement Sector and Technology Task Group. [WEB](https://www.amssa.org/wp-content/uploads/2021/05/EN-Settlement-Sector-Technology-Task-Group-final-report-and-recommen....pdf)
+- Ekmekcioglu, C., Black, R., Campana, M. (2022). "The Future is Now: How to Ensure High-Quality and Inclusive Settlement Services." *AMSSA, Canada*
+- Lui, JL., Ekmekcioglu, C., Campana, M.  (2021). "From Silos to Solutions: Toward Sustainable and Equitable Hybrid Service Delivery in the Immigrant & Refugee-Serving Sector in Canada". *AMSSA, Canada* [WEB](https://www.amssa.org/wp-content/uploads/2021/05/EN-Settlement-Sector-Technology-Task-Group-final-report-and-recommen....pdf)
 
 ### Scientific Communication
 
