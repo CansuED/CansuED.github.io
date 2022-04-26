@@ -6,6 +6,16 @@ author_profile: true
 ---
 
 
+
+### Journal articles
+
+- Sabie, D., \textbf{Ekmekcioglu, C.}, Ahmed, I. (2022).
+        ``A Decade of International Migration Research in HCI: Overview, Challenges, Ethics, Impact, and Future Directions''.~\emph{ACM Transactions on Computer-Human Interaction (ToCHI)}. Vol.~29, No:~4,
+        \doi{10.1145/3490555}
+- Cagdas Dedeoglu, Cansu Ekmekcioglu. (2020). *Information Infrastructures and the Future of Ecological Citizenship in the Anthropocene*. Social Sciences. 9(1).  [https://doi.org/10.3390/socsci9010003](https://doi.org/10.3390/socsci9010003) 
+
+
+
 ### Peer-reviewed proceedings
 
 - Dina Sabie, Reem Talhouk, Cansu Ekmekcioglu, Carleen Maitland, Volker Wulf, Eiad Yafi, Samar Sabie, Asam Almohamed, Safa'a AbuJarour, Kahina Le Louvier, Faheem Hussain, Syed Ishtiaque Ahmed. (2021). *Migration and Mobility in HCI: Rethinking Boundaries, Methods, and Impact*. In CHI EA '21:Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems, May 2021.[https://doi.org/10.1145/3411763.3441352](https://doi.org/10.1145/3411763.3441352) 
@@ -14,9 +24,8 @@ author_profile: true
 
 - Dina Sabie, Samar Sabie, Cansu Ekmekcioglu, Yasaman Rohanifar, Fatma Hashim, Steve Easterbrook, and Syed Ishtiaque Ahmed. (2019). *Exile Within Borders: Understanding the Limits of the Internally Displaced People (IDPs) in Iraq*. In Proceedings of the 2019 Workshop on Computing within Limits (LIMITS'19), Lappeenranta, Finland. [https://doi.org/10.1145/3338103.3338104](https://doi.org/10.1145/3338103.3338104)
 
-### Journal articles
 
-- Cagdas Dedeoglu, Cansu Ekmekcioglu. (2020). *Information Infrastructures and the Future of Ecological Citizenship in the Anthropocene*. Social Sciences. 9(1).  [https://doi.org/10.3390/socsci9010003](https://doi.org/10.3390/socsci9010003) 
+
 
 ### Position papers
 
