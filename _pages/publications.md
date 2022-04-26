@@ -1,13 +1,4 @@
 
----
-layout: archive
-title: "Publications"
-permalink: /publications/
-author_profile: true
----
-
-
-
 ### Journal articles
 
 - Sabie, D., Ekmekcioglu, C., Ahmed, I. (2022). "A Decade of International Migration Research in HCI: Overview, Challenges, Ethics, Impact, and Future Directions". In *ACM Transactions on Computer-Human Interaction (ToCHI)*. Vol.29, No:4. [https://dl.acm.org/doi/abs/10.1145/3490555](https://dl.acm.org/doi/abs/10.1145/3490555)
