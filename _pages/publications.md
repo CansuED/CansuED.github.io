@@ -9,7 +9,7 @@ author_profile: true
 
 ### Journal articles
 
-- Sabie, D., Ekmekcioglu, C., Ahmed, I. (2022). "A Decade of International Migration Research in HCI: Overview, Challenges, Ethics, Impact, and Future Directions". In *ACM Transactions on Computer-Human Interaction (ToCHI)*. Vol.~29, No:~4.[https://dl.acm.org/doi/abs/10.1145/3490555](https://dl.acm.org/doi/abs/10.1145/3490555)
+- Sabie, D., Ekmekcioglu, C., Ahmed, I. (2022). "A Decade of International Migration Research in HCI: Overview, Challenges, Ethics, Impact, and Future Directions". In *ACM Transactions on Computer-Human Interaction (ToCHI)*. Vol.29, No:4.[https://dl.acm.org/doi/abs/10.1145/3490555](https://dl.acm.org/doi/abs/10.1145/3490555)
 - Cagdas Dedeoglu, Cansu Ekmekcioglu. (2020). *Information Infrastructures and the Future of Ecological Citizenship in the Anthropocene*. Social Sciences. 9(1).  [https://doi.org/10.3390/socsci9010003](https://doi.org/10.3390/socsci9010003) 
 
 
