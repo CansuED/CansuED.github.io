@@ -37,6 +37,7 @@ author_profile: true
 
 ### Scientific Communication
 
+- Hynie, M., Kilicaslan, G., Ekmekcioglu, C., Karim, R., Taylor, P., Scantlebury, T., Heins, C., McDonough, L.,Cascante, I. (2021). "Information Access and Resilience for Newcomer Groups" In *BMRC-IRMU Research Digest* [WEB](https://bmrc-irmu.info.yorku.ca/files/2021/12/Hynie-FINAL-York-Region-EN-Research-Summary_mh-1.pdf?x15611)
 - Dahya, N., Ekmekcioglu, C., Arvisais, O., Decarpentrie. (2021). "In refugee camps, access to internet supports research during the coronavirus pandemic" In *The Conversation Canada* [WEB](https://theconversation.com/in-refugee-camps-access-to-internet-supports-research-during-the-coronavirus-pandemic-146468) 
 
 ### News Articles, Public Writing and Essays 
