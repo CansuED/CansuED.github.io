@@ -29,13 +29,13 @@ author_profile: true
 
 ### Policy Reports
 
-- Ekmekcioglu, C., Black, R., Campana, M. (2022). "The Future is Now: How to Ensure High-Quality and Inclusive Settlement Services." *AMSSA, Canada*
-- Lui, JL., Ekmekcioglu, C., Campana, M.  (2021). "From Silos to Solutions: Toward Sustainable and Equitable Hybrid Service Delivery in the Immigrant & Refugee-Serving Sector in Canada". *AMSSA, Canada* [WEB](https://www.amssa.org/wp-content/uploads/2021/05/EN-Settlement-Sector-Technology-Task-Group-final-report-and-recommen....pdf)
+- Ekmekcioglu, C., Black, R., Campana, M. (2022). "The Future is Now: How to Ensure High-Quality and Inclusive Settlement Services." *AMSSA, Canada.*
+- Lui, JL., Ekmekcioglu, C., Campana, M.  (2021). "From Silos to Solutions: Toward Sustainable and Equitable Hybrid Service Delivery in the Immigrant & Refugee-Serving Sector in Canada". *AMSSA, Canada.* [WEB](https://www.amssa.org/wp-content/uploads/2021/05/EN-Settlement-Sector-Technology-Task-Group-final-report-and-recommen....pdf)
 
 ### Scientific Communication
 
-- Hynie, M., Kilicaslan, G., Ekmekcioglu, C., Karim, R., Taylor, P., Scantlebury, T., Heins, C., McDonough, L.,Cascante, I. (2021). "Information Access and Resilience for Newcomer Groups" In *BMRC-IRMU Research Digest* [WEB](https://bmrc-irmu.info.yorku.ca/files/2021/12/Hynie-FINAL-York-Region-EN-Research-Summary_mh-1.pdf?x15611)
-- Dahya, N., Ekmekcioglu, C., Arvisais, O., Decarpentrie. (2021). "In refugee camps, access to internet supports research during the coronavirus pandemic" In *The Conversation Canada* [WEB](https://theconversation.com/in-refugee-camps-access-to-internet-supports-research-during-the-coronavirus-pandemic-146468) 
+- Hynie, M., Kilicaslan, G., Ekmekcioglu, C., Karim, R., Taylor, P., Scantlebury, T., Heins, C., McDonough, L.,Cascante, I. (2021). "Information Access and Resilience for Newcomer Groups" In *BMRC-IRMU Research Digest.* [WEB](https://bmrc-irmu.info.yorku.ca/files/2021/12/Hynie-FINAL-York-Region-EN-Research-Summary_mh-1.pdf?x15611)
+- Dahya, N., Ekmekcioglu, C., Arvisais, O., Decarpentrie. (2021). "In refugee camps, access to internet supports research during the coronavirus pandemic" In *The Conversation Canada.* [WEB](https://theconversation.com/in-refugee-camps-access-to-internet-supports-research-during-the-coronavirus-pandemic-146468) 
 
 ### Public Writing and Essays 
 
