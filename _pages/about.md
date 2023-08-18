@@ -16,7 +16,7 @@ I held an MA in Media and Communications at [Galatasaray University](https://www
 
 Pronouns: _she/her/hers_
 
-My first name pronounced as _Jan-Su_
+My first name pronounced as _Jahn-Suo_
 
 
 
