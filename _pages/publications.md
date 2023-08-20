@@ -9,22 +9,26 @@ author_profile: true
 
 ### Peer-Reviewed Papers
 
-- Ekmekcioglu, C., Chandra, P., Ahmed, I. “A Matter of Time: Anticipation Work and Digital Temporalities in Refugee Humanitarian Assistance in Turkey”. Proceedings of the ACM Conference on Human-Computer Interaction 7, CSCW1, Article 22 (April 2023), [https://doi.org/10.1145/3579455](https://doi.org/10.1145/3579455)
+- Ekmekcioglu, C., Chandra, P., Ahmed, I. A Matter of Time: Anticipation Work and Digital Temporalities in Refugee Humanitarian Assistance in Turkey. Proceedings of the ACM Conference on Human-Computer Interaction 7, CSCW1, Article 22 (April 2023), [https://doi.org/10.1145/3579455](https://doi.org/10.1145/3579455)
 
 - Caidi, N., Ekmekcioglu, C., Jamali, R., & Chandra, P. (2023). (Re)Capturing the Spirit of Ramadan: Techno-Religious Practices in the Time of COVID-19. Proceedings of the ACM Conference on Human-Computer Interaction (CSCW2). Vol. 10, Article 249. DOI: 10.1145/3610040
+  
+- Arvisais, O., Decarpentrie,L., Dahya,N., Ekmekcioglu, C. (2023). Apprendre en autonomie dans les camps de réfugiés : une proposition méthodologique pour capturer les perspectives communautaires sur l’enseignement, l’apprentissage et la technologie, Canadian Journal of Development Studies / Revue canadienne d'études du développement, 44:2, 229-248, [https://doi.org/10.1080/02255189.2023.2176295](https://doi.org/10.1080/02255189.2023.2176295)
 
-- Sabie, D., Ekmekcioglu, C., Ahmed, I. (2022). "A Decade of International Migration Research in HCI: Overview, Challenges, Ethics, Impact, and Future Directions". In ACM Trans. Comput.-Hum. Interact. 29, 4, Article 30 (August 2022), 35 pages. https://doi.org/10.1145/3490555[https://dl.acm.org/doi/abs/10.1145/3490555](https://dl.acm.org/doi/abs/10.1145/3490555)
+- Ekmekcioglu, C., Caidi, N., Chandra, P. & Jamali, R. (2022). Altered Rhythms of Ramadan: Temporalities of Social Media Non/Use during COVID-19. Social Media & Society Conference Proceedings. July 2022.
 
+- Sabie, D., Ekmekcioglu, C., Ahmed, I. (2022). "A Decade of International Migration Research in HCI: Overview, Challenges, Ethics, Impact, and Future Directions". In ACM Trans. Comput.-Hum. Interact. 29, 4, Article 30 (August 2022), 35 pages. [https://doi.org/10.1145/3490555](https://doi.org/10.1145/3490555)
 
-- Dedeoglu, C., Ekmekcioglu, C. (2020). "Information Infrastructures and the Future of Ecological Citizenship in the Anthropocene". *Social Sciences*. 9(1). [https://doi.org/10.3390/socsci9010003](https://doi.org/10.3390/socsci9010003) 
-
-
-- Caidi, N., Ekmekcioglu, C., Jamali, R., Chandra, P. (2022). "Socially-Distant Fasting: Information Practices of Young Muslims During Pandemic" In *ISIC 2022 (accepted).* 
-- Dahya, N., Ekmekcioglu, C., Arvisais, O., Decarpentrie, L. (2021). "Learning In/Dependently in Refugee Camps: Community-based Perspectives on Teaching, Learning, and Technology'". In *AoIR Selected Papers of Internet Research.* [https://doi.org/10.5210/spir.v2021i0.12158](https://doi.org/10.5210/spir.v2021i0.12158) 
-- Sabie, D., Talhouk, R., Ekmekcioglu, C., Maitland, C., Wulf, V., Yafi, E., Sabie, S., Almohamaed, A., AbuJarour, S., Le Louvier, K., Hussain, F., Ahmed, I. (2021). "Migration and Mobility in HCI: Rethinking Boundaries, Methods, and Impact". *CHI EA'21:~Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems.* [https://doi.org/10.1145/3411763.3441352](https://doi.org/10.1145/3411763.3441352) 
+- Caidi, N., Ekmekcioglu, C., Jamali, R., & Chandra, P. (2022). Socially-distant fasting: information practices of young muslims during the COVID-19 pandemic. In Proceedings of ISIC: the information behaviour conference, Berlin, Germany, 26-29 September, 2022. Information Research, 27(Special issue), isic2235. [https://doi.org/10.47989/irisic2235](https://doi.org/10.47989/irisic2235)
+  
+- - Dahya, N., Ekmekcioglu, C., Arvisais, O., Decarpentrie, L. (2021). "Learning In/Dependently in Refugee Camps: Community-based Perspectives on Teaching, Learning, and Technology'". In *AoIR Selected Papers of Internet Research.* [https://doi.org/10.5210/spir.v2021i0.12158](https://doi.org/10.5210/spir.v2021i0.12158)
+    
+- Dedeoglu, C., Ekmekcioglu, C. (2020). "Information Infrastructures and the Future of Ecological Citizenship in the Anthropocene". *Social Sciences*. 9(1). [https://doi.org/10.3390/socsci9010003](https://doi.org/10.3390/socsci9010003)
+- Sabie, D., Talhouk, R., Ekmekcioglu, C., Maitland, C., Wulf, V., Yafi, E., Sabie, S., Almohamaed, A., AbuJarour, S., Le Louvier, K., Hussain, F., Ahmed, I. (2021). "Migration and Mobility in HCI: Rethinking Boundaries, Methods, and Impact". *CHI EA'21:~Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems.* [https://doi.org/10.1145/3411763.3441352](https://doi.org/10.1145/3411763.3441352)
+  
 - Chang, S., McKay, D., Caidi, N., Mendoza, A., Gomes, C., Ekmekcioglu, C. (2021). "From way across the sea:~Information overload and international students during the COVID-19 pandemic". In *Proceedings of Association of Information Science and Technology.* [https://doi.org/10.1002/pra2.289](https://asistdl.onlinelibrary.wiley.com/doi/10.1002/pra2.289)
+  
 - Sabie, D., Sabie, S., Ekmekcioglu, C., Rohanifar, Y., Hashim, F., Easterbrook, S., Ahmed, I. (2019). "Exile Within Borders: Understanding the Limits of the Internally Displaced People (IDPs) in Iraq." In *Proceedings of the 2019 Workshop on Computing within Limits (LIMITS'19), Lappeenranta, Finland.* [https://doi.org/10.1145/3338103.3338104](https://doi.org/10.1145/3338103.3338104)
-
 
 
 ### Workshop papers
