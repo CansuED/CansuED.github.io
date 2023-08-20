@@ -32,7 +32,7 @@ author_profile: true
 - Sabie, D., Sabie, S.,**Ekmekcioglu, C.**, Rohanifar, Y., Hashim, F., Easterbrook, S., Ahmed, I. (2019). Exile Within Borders: Understanding the Limits of the Internally Displaced People (IDPs) in Iraq. Proceedings of the 2019 Workshop on Computing within Limits (LIMITS'19), Lappeenranta, Finland.* [https://doi.org/10.1145/3338103.3338104](https://doi.org/10.1145/3338103.3338104)
 
 
-### Workshop papers
+### Peer-Reviewed Panels and Workshop Papers
 
 - Radford, M.L., Connaway, L.S., Rorissa, A., **Ekmekcioglu, C.** and Caidi, N. (2022), Researching in Times of Crisis: Toward Information-Resilient Societies. Proceedings of the Association for Information Science and Technology, 59: 595-597. [https://doi.org/10.1002/pra2.635](https://doi.org/10.1002/pra2.635)
 - Peer, F., Butoliya, D., **Ekmekcioglu, C.**, Petterson, A., Chandra, P., & Coleman, B. (2022). Public Translation: Information and Resource Sharing in the City. In Proceedings of the Participatory Design Conference 2022 - Volume 2 (PDC '22), Vol. 2 (pp. 273-274). Association for Computing Machinery. [https://doi.org/10.1145/3537797.3537855](https://doi.org/10.1145/3537797.3537855)
@@ -45,7 +45,7 @@ author_profile: true
 
 - Lui, JL., **Ekmekcioglu, C.**, Campana, M.  (2021). "From Silos to Solutions: Toward Sustainable and Equitable Hybrid Service Delivery in the Immigrant & Refugee-Serving Sector in Canada". *AMSSA, Canada.* [Link](https://www.amssa.org/wp-content/uploads/2021/05/EN-Settlement-Sector-Technology-Task-Group-final-report-and-recommen....pdf)
 
-### Scientific Communication
+### Knowledge Mobilization
 
 - Hynie, M., Kilicaslan, G., **Ekmekcioglu, C.**, Karim, R., Taylor, P., Scantlebury, T., Heins, C., McDonough, L.,Cascante, I. (2021). "Information Access and Resilience for Newcomer Groups" In *BMRC-IRMU Research Digest.* [Link](https://bmrc-irmu.info.yorku.ca/files/2021/12/Hynie-FINAL-York-Region-EN-Research-Summary_mh-1.pdf?x15611)
 - Dahya, N., **Ekmekcioglu, C.**, Arvisais, O., Decarpentrie. (2021). "In refugee camps, access to internet supports research during the coronavirus pandemic" In *The Conversation Canada.* [Link](https://theconversation.com/in-refugee-camps-access-to-internet-supports-research-during-the-coronavirus-pandemic-146468) 
