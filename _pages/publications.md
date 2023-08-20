@@ -52,8 +52,8 @@ author_profile: true
 
 ### Public Writing and Essays 
 
-- Ekmekcioglu, C. (2019). "Creative Methods of Dissemination in Forced Migration Research". In *ESPMI Network.* [Link](https://espminetwork.com/cansu-e-dedoglu-dissemination-methods/)
-- Ekmekcioglu, C. (2009). "Drôle de changement de season Turquie". In *Café Babel.* [Link](https://cafebabel.com/fr/article/drole-de-changement-de-saison-turque-5ae0059df723b35a145df023/)
+- **Ekmekcioglu, C.** (2019). "Creative Methods of Dissemination in Forced Migration Research". In *ESPMI Network.* [Link](https://espminetwork.com/cansu-e-dedoglu-dissemination-methods/)
+- **Ekmekcioglu, C.**(2009). "Drôle de changement de season Turquie". In *Café Babel.* [Link](https://cafebabel.com/fr/article/drole-de-changement-de-saison-turque-5ae0059df723b35a145df023/)
 
 
 <!---
