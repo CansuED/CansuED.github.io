@@ -37,6 +37,8 @@ author_profile: true
 
 ### Peer-Reviewed Panels and Workshop Papers
 
+- Abu-Salma, R., Talhouk, R., Such, J., Aradau, C., Meloni, F., He, S., Ahmed, S. I., **Ekmekcioglu, C.**, Sabie, D., Jensen, R. B., McClearn, J., Weibert, A., Krüger, M., Hussain, F., & Baguma, R. (2023). Diverse Migration Journeys and Security Practices: Engaging with Longitudinal Perspectives of Migration and (Digital) Security. In Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems (CHI EA '23) (pp. 1-7). Association for Computing Machinery. [https://doi.org/10.1145/3544549.3573800](https://doi.org/10.1145/3544549.3573800)
+  
 - Radford, M.L., Connaway, L.S., Rorissa, A., **Ekmekcioglu, C.** and Caidi, N. (2022), Researching in Times of Crisis: Toward Information-Resilient Societies. Proceedings of the Association for Information Science and Technology, 59: 595-597. [https://doi.org/10.1002/pra2.635](https://doi.org/10.1002/pra2.635)
 - Peer, F., Butoliya, D., **Ekmekcioglu, C.**, Petterson, A., Chandra, P., & Coleman, B. (2022). Public Translation: Information and Resource Sharing in the City. In Proceedings of the Participatory Design Conference 2022 - Volume 2 (PDC '22), Vol. 2 (pp. 273-274). Association for Computing Machinery. [https://doi.org/10.1145/3537797.3537855](https://doi.org/10.1145/3537797.3537855)
 - **Ekmekcioglu, C.**, Dahya, N., Decarpentrie, L., Arvisais, O.(2021). "Time, Temporality and Technology in Remote Participatory Research: Implications for HCI Research in Forced Migration". In *CHI 2021 Migration and Mobilities in HCI: Rethinking Boundaries, Methods, and Impact.* [Link](http://www.cs.toronto.edu/~dsabie/MigrationWorkshop/Submissions/Ekmekcioglu-et-al_2021.pdf)
