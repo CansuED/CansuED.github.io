@@ -57,6 +57,7 @@ author_profile: true
 
 ### Public Writing and Essays 
 
+- **Ekmekcioglu, C.** Publishing with Care, Publishing with Communities. (2022). Critical Digital Methods Institute [Link](https://criticaldigitalmethods.ca/2022/08/17/publishing-with-care-publishing-with-communities/)
 - Baloglu, S., & **Ekmekcioglu, C.** (2022). Do You Think God Loves Immigrant Kids, Mom? Director: Rena Lusin Bitmez. 2019. 96 minutes: Learning to Migrate Before Learning to Fly. Refuge: Canada’s Journal on Refugees, 38(2), 1–3. [https://doi.org/10.25071/1920-7336.41029](https://doi.org/10.25071/1920-7336.41029)
 - **Ekmekcioglu, C.** (2019). "Creative Methods of Dissemination in Forced Migration Research". In *ESPMI Network.* [Link](https://espminetwork.com/cansu-e-dedoglu-dissemination-methods/)
 - **Ekmekcioglu, C.**(2009). "Drôle de changement de season Turquie". In *Café Babel.* [Link](https://cafebabel.com/fr/article/drole-de-changement-de-saison-turque-5ae0059df723b35a145df023/)
