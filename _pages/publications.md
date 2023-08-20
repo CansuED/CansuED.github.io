@@ -11,7 +11,7 @@ author_profile: true
 
 - **Ekmekcioglu, C.**, Chandra, P., Ahmed, I. A Matter of Time: Anticipation Work and Digital Temporalities in Refugee Humanitarian Assistance in Turkey. Proceedings of the ACM Conference on Human-Computer Interaction 7, CSCW1, Article 22 (April 2023), [https://doi.org/10.1145/3579455](https://doi.org/10.1145/3579455)
 
-- Caidi, N., **Ekmekcioglu, C.**, Jamali, R., & Chandra, P. (2023). (Re)Capturing the Spirit of Ramadan: Techno-Religious Practices in the Time of COVID-19. Proceedings of the ACM Conference on Human-Computer Interaction (CSCW2). Vol. 10, Article 249. DOI: 10.1145/3610040
+- Caidi, N., **Ekmekcioglu, C.**, Jamali, R., & Chandra, P. (2023). (Re)Capturing the Spirit of Ramadan: Techno-Religious Practices in the Time of COVID-19. Proceedings of the ACM Conference on Human-Computer Interaction (CSCW2). Vol. 10, Article 249. [https://doi.org/10.1145/3610040](https://doi.org/10.1145/3610040)
   
 - Arvisais, O., Decarpentrie,L., Dahya,N., **Ekmekcioglu, C.** (2023). Apprendre en autonomie dans les camps de réfugiés : une proposition méthodologique pour capturer les perspectives communautaires sur l’enseignement, l’apprentissage et la technologie, Canadian Journal of Development Studies / Revue canadienne d'études du développement, 44:2, 229-248, [https://doi.org/10.1080/02255189.2023.2176295](https://doi.org/10.1080/02255189.2023.2176295)
   
