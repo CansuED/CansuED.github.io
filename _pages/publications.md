@@ -21,7 +21,7 @@ author_profile: true
 
 - Caidi, N., Ekmekcioglu, C., Jamali, R., & Chandra, P. (2022). Socially-distant fasting: information practices of young muslims during the COVID-19 pandemic. In Proceedings of ISIC: the information behaviour conference, Berlin, Germany, 26-29 September, 2022. Information Research, 27(Special issue), isic2235. [https://doi.org/10.47989/irisic2235](https://doi.org/10.47989/irisic2235)
   
-- - Dahya, N., Ekmekcioglu, C., Arvisais, O., Decarpentrie, L. (2021). "Learning In/Dependently in Refugee Camps: Community-based Perspectives on Teaching, Learning, and Technology'". In *AoIR Selected Papers of Internet Research.* [https://doi.org/10.5210/spir.v2021i0.12158](https://doi.org/10.5210/spir.v2021i0.12158)
+- Dahya, N., Ekmekcioglu, C., Arvisais, O., Decarpentrie, L. (2021). "Learning In/Dependently in Refugee Camps: Community-based Perspectives on Teaching, Learning, and Technology'". In *AoIR Selected Papers of Internet Research.* [https://doi.org/10.5210/spir.v2021i0.12158](https://doi.org/10.5210/spir.v2021i0.12158)
     
 - Dedeoglu, C., Ekmekcioglu, C. (2020). "Information Infrastructures and the Future of Ecological Citizenship in the Anthropocene". *Social Sciences*. 9(1). [https://doi.org/10.3390/socsci9010003](https://doi.org/10.3390/socsci9010003)
 - Sabie, D., Talhouk, R., Ekmekcioglu, C., Maitland, C., Wulf, V., Yafi, E., Sabie, S., Almohamaed, A., AbuJarour, S., Le Louvier, K., Hussain, F., Ahmed, I. (2021). "Migration and Mobility in HCI: Rethinking Boundaries, Methods, and Impact". *CHI EA'21:~Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems.* [https://doi.org/10.1145/3411763.3441352](https://doi.org/10.1145/3411763.3441352)
