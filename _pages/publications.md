@@ -35,6 +35,7 @@ author_profile: true
 ### Workshop papers
 
 - Radford, M.L., Connaway, L.S., Rorissa, A., Ekmekcioglu, C. and Caidi, N. (2022), Researching in Times of Crisis: Toward Information-Resilient Societies. Proceedings of the Association for Information Science and Technology, 59: 595-597. [https://doi.org/10.1002/pra2.635](https://doi.org/10.1002/pra2.635)
+- Peer, F., Butoliya, D., Ekmekcioglu, C., Petterson, A., Chandra, P., & Coleman, B. (2022). Public Translation: Information and Resource Sharing in the City. In Proceedings of the Participatory Design Conference 2022 - Volume 2 (PDC '22), Vol. 2 (pp. 273-274). Association for Computing Machinery. [https://doi.org/10.1145/3537797.3537855](https://doi.org/10.1145/3537797.3537855)
 - Ekmekcioglu, C., Dahya, N., Decarpentrie, L., Arvisais, O.(2021). "Time, Temporality and Technology in Remote Participatory Research: Implications for HCI Research in Forced Migration". In *CHI 2021 Migration and Mobilities in HCI: Rethinking Boundaries, Methods, and Impact.* [Link](http://www.cs.toronto.edu/~dsabie/MigrationWorkshop/Submissions/Ekmekcioglu-et-al_2021.pdf)
 - Ekmekcioglu, C. (2020). "Humanitarian Innovation and AI Ethics: Implications for Refugee Settings". In *Ethical Innovation for Artificial Intelligence.* [Link](https://ei4ai.wordpress.com/2020/10/19/humanitarian-innovation-and-ai-ethics-implications-for-refugee-settings-by-cansu-e-dedeoglu-faculty-of-information-university-of-toronto/)
 
