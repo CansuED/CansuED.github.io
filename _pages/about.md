@@ -12,9 +12,6 @@ I’m a PhD candidate at the [Faculty of Information](https://ischool.utoronto.c
 
 I work as a teaching associate at the [Institute of Communication, Culture, Information, and Technology (ICCIT)](https://www.utm.utoronto.ca/iccit/institute-communication-culture-information-and-technology) and also a part of the [Third Space Lab](https://thirdspace.toronto.edu/) led by [Dr. Ishtiaque Ahmed](https://www.ishtiaque.net/) and [Street Lab](https://www.streetlab.tech/) led by [Dr. Priyank Chandra](https://priyankc.com/) at the University of Toronto. 
 
-
-I am affiliated with the [Centre for Refugee Studies (CRS)](https://crs.info.yorku.ca) and a member of the [Association for Information Science and Technology(ASIS&T)](https://www.asist.org) and [Design Research Society](https://www.designresearchsociety.org/cpages/home).
-
 I held an MA in Media and Communications at [Galatasaray University](https://www.gsu.edu.tr/fr/), and a BA in Political Science at [Bogazici University](http://www.boun.edu.tr/en-US).
 
 Pronouns: _she/her/hers_
