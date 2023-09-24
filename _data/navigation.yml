@@ -12,10 +12,11 @@ main:
   - title: "Teaching"
     url: /teaching/
 
- #- title: "News"
- #   url: /news/    
+ - title: "News"
+    url: /news/    
 
-    
+ - title: "Previous News"
+    url: /news/  
         
   #- title: "Art"
   #  url: /art/
