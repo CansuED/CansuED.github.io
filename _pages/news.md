@@ -6,6 +6,14 @@ author_profile: true
 redirect_from:
   - /service
 ---
+
+* October 27-31, 2023 - I will attend ASIST 2023 in London!
+* October 14-18, 2023 - I will attend CSCW 2023 in Minneapolis!
+
+
+
+
+
 * March 25, 2021 - I co-organized workshop [Reimagining the Futures of Immigrant Settlement Service: Lessons Learned from Digital Service](https://web.cvent.com/event/983ceb70-4b3f-4113-924c-b8209ea72119/websitePage:645d57e4-75eb-4769-b2c0-f201a0bfc6ce) at the 23rd Metropolis 2021 Conference!
 
 * January 22, 2021 - Our open panel [Digital Data Collection and Migration Studies: Fostering Good Relations Across Time and Space](https://www.4sonline.org/59-digital-data-collection-and-migration-studies-fostering-good-relations-across-time-and-place/) was accepted at 4S Conference!
