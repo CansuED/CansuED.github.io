@@ -14,9 +14,6 @@ main:
 
  - title: "News"
     url: /news/    
-
- - title: "PreviousNews"
-    url: /news/  
         
   #- title: "Art"
   #  url: /art/
