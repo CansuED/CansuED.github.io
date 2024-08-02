@@ -9,12 +9,8 @@ redirect_from:
 ---
 
 
-I’m a Incoming Assistant Professor of Information Systems at DeGroote School of Business at McMaster University. 
+I am an Assistant Professor of Information Systems at the DeGroote School of Business at McMaster University. 
 
-
-Pronouns: _she/her/hers_
-
-My first name pronounced as _Jahn-Suo_
 
 
 
