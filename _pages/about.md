@@ -18,6 +18,7 @@ I earned my Ph.D. in Information Science from the University of Toronto, and I h
 With over 10 years of experience in researching and consulting on technology projects related to migration, humanitarian efforts, and international development, I have worked closely with industry, non-profit, humanitarian aid, and policy sectors. I am affiliated with UNESCO’s Inclusive Policy Lab, the Critical Computing Group, and the Centre for Refugee Studies at York University. In 2023, I was named a New Leader of the Association for Information Science and Technology.
 
 
+### Research Interests ###
 
 
 
