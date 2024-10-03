@@ -23,6 +23,7 @@ With over 10 years of experience in researching and consulting on technology pro
 * Information science
 * Human-computer interaction
 * Data studies
+* Future of work
 * Technology, work, and organizations
 * Information and communication technologies for development
 
