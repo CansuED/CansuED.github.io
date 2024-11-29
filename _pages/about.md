@@ -20,11 +20,11 @@ With over 10 years of experience in researching and consulting on technology pro
 
 # Research Interests #
 
-* Information science
 * Human-computer interaction
 * Data studies
 * Future of work
-* Technology, work, and organizations
+* Data, technology, work, and organizations
+* Digital data and business
 * Information and communication technologies for development
 
 
