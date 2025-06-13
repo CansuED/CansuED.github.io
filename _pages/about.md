@@ -8,8 +8,9 @@ redirect_from:
   - /about.html
 ---
 
+
 Hi! I'm Cansu Ekmekcioglu.
-I am an Assistant Professor of Information Systems at the [DeGroote School of Business, McMaster University](https://research.degroote.mcmaster.ca/academic-areas/information-systems/). I am a member of [McMaster Institute for Research on Aging (MIRA)](https://mira.mcmaster.ca/our-faculty/cansu-ekmekcioglu/) and [The McMaster Centre for Research on Employment and Work (MCREW)](https://research.degroote.mcmaster.ca/centers-and-institutes/#:~:text=McMaster%20Centre%20for%20Research%20on%20Employment%20and%20Work%20(MCREW)&text=The%20Centre%20unites%20leading%20McMaster,behaviors%20and%20expectations%20affect%20organizations). 
+I am an Assistant Professor of Information Systems at the [DeGroote School of Business, McMaster University](https://research.degroote.mcmaster.ca/academic-areas/information-systems/). I am a member of [McMaster Institute for Research on Aging (MIRA)](https://mira.mcmaster.ca/our-faculty/cansu-ekmekcioglu/) and [The McMaster Centre for Research on Employment and Work (MCREW)](https://mcrew.ca/). 
 
 My research focuses on the intersection of information systems and sustainability, examining the use and design of new technologies to drive sustainable managerial, organizational, and community growth. My current research explores the role of artificial intelligence and data-driven technologies in advancing sustainable development goals. 
 
