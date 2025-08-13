@@ -23,7 +23,6 @@ She completed her Ph.D. in Information Science from the University of Toronto, a
 * Data studies
 * Future of work
 * Data, technology, work, and organizations
-* Digital data and business
 * Information and communication technologies for development
 
 
