@@ -8,7 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-
 Cansu Ekmekcioglu is an [Assistant Professor of Information Systems](https://degroote.mcmaster.ca/profiles/ekmekcic/) in the DeGroote School of Business at McMaster University in Hamilton, Ontario. At McMaster, Cansu directs D4 Innovation Lab. She is also a member of [McMaster Institute for Research on Aging (MIRA)](https://mira.mcmaster.ca/our-faculty/cansu-ekmekcioglu/) and [The McMaster Centre for Research on Employment and Work (MCREW)](https://mcrew.ca/). 
 
 Cansu's research focuses on the intersection of information systems and sustainability, examining the use and design of new technologies to drive sustainable managerial, organizational, and community growth. Her current research explores the role of artificial intelligence in public service delivery.
