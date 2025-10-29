@@ -12,7 +12,7 @@ classes: wide
   <h1>Cansu Ekmekcioglu</h1>
 
   <div class="subtitle">
-    Associate Professor, Information Systems and Sociology<br>
+    Assistant Professor of Information Systems<br>
     DeGroote School of Business, McMaster University
   </div>
 
