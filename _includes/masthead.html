@@ -2,21 +2,36 @@
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
+    <!-- Site Title - Outside of navigation -->
+    <div class="site-title">
+      <a href="{{ base_path }}/">{{ site.title }}</a>
+    </div>
+    
+    <!-- Navigation Menu -->
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <!-- Hidden checkbox for mobile toggle -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        
+        <!-- Hamburger button label (only visible on mobile) -->
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span>☰</span>
+        </label>
+        
+        <!-- Navigation links -->
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
+          <!-- Main navigation links from _data/navigation.yml -->
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
-              {% else %}
+            {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item">
+              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+            </li>
           {% endfor %}
         </ul>
-        <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>

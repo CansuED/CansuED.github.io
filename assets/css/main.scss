@@ -1,16 +1,7 @@
 ---
 ---
 
-/*
- *    Minimal Mistakes Jekyll Theme
- *
- *  - Michael Rose
- *  - mademistakes.com
- *  - https://twitter.com/mmistakes
- *
-*/
-
-@import "vendor/breakpoint/breakpoint"; // media query mixins
+@import "vendor/breakpoint/breakpoint";
 @import "variables";
 @import "mixins";
 @import "vendor/susy/susy";
@@ -39,3 +30,438 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+/* Hide footer completely */
+.page__footer,
+footer,
+.site-footer {
+  display: none !important;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Prevent scrolling ONLY on homepage */
+body.layout--home,
+body.layout--splash {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+.homepage-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 175px);
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0 auto 1.2em auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.4em;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #333;
+  }
+
+  .subtitle {
+    font-size: 1.15em;
+    color: #666;
+    margin-bottom: 0.2em;
+    line-height: 1.4;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .social-links {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8em;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #f5f5f5;
+      color: #666;
+      font-size: 1.2em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+
+      &:hover {
+        background-color: #52adc8;
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(82, 173, 200, 0.3);
+      }
+
+      i {
+        width: 1em;
+        text-align: center;
+      }
+    }
+  }
+
+  .links {
+    margin-top: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    a {
+      margin: 0 0.5em;
+      color: #52adc8;
+      text-decoration: none;
+      font-size: 0.95em;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.page__content {
+  max-width: 800px !important;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.7;
+  box-sizing: border-box;
+  padding: 0 1em;
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-bottom: 1.3em;
+  }
+}
+
+.sidebar {
+  display: none !important;
+}
+
+.page {
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.page__inner-wrap {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ============================================
+   NAVIGATION STYLES - CLEAN VERSION
+   ============================================ */
+
+.masthead {
+  border-bottom: 1px solid #f2f3f3;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.masthead__inner-wrap {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.masthead__menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* Site Title */
+.site-title {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+
+  a {
+    color: #333 !important;
+    text-decoration: none;
+
+    &:hover {
+      color: #52adc8 !important;
+    }
+  }
+}
+
+/* Navigation container */
+.greedy-nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Hide checkbox */
+.nav-toggle {
+  display: none;
+}
+
+/* Hamburger button - HIDDEN on desktop */
+.nav-toggle-label {
+  display: none;
+}
+
+/* Hide old greedy-nav elements */
+.greedy-nav button,
+.navicon,
+.navicon::before,
+.navicon::after,
+.hidden-links {
+  display: none !important;
+}
+
+/* ============================================
+   DESKTOP NAVIGATION (default)
+   ============================================ */
+.visible-links {
+  display: flex !important;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: static !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Desktop menu items - with overrides for active/current states */
+.masthead__menu-item,
+.masthead__menu-item--active,
+.masthead__menu-item.current,
+li.masthead__menu-item {
+  display: inline-block !important;
+  white-space: nowrap;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  
+  a,
+  a:link,
+  a:visited,
+  a:active {
+    display: block !important;
+    color: #666 !important;
+    text-decoration: none !important;
+    padding: 0.5em 1em !important;
+    margin: 0 !important;
+    font-size: 0.9em !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    transition: color 0.2s ease !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    &:hover {
+      color: #52adc8 !important;
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+  }
+}
+
+#main {
+  margin-top: 70px !important;
+  padding: 0 !important;
+}
+
+/* ============================================
+   MOBILE STYLES (900px and below)
+   ============================================ */
+@media (max-width: 900px) {
+  .homepage-content {
+    padding: 0 1.5em;
+    height: calc(100vh - 60px);
+
+    .subtitle {
+      white-space: normal;
+      font-size: 1em;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .profile-image {
+      width: 150px;
+      height: 150px;
+    }
+
+    .social-links {
+      gap: 0.6em;
+
+      a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  #main {
+    margin-top: 60px !important;
+  }
+
+  .masthead__inner-wrap {
+    padding: 0.8em 1em;
+  }
+
+  .site-title {
+    font-size: 1em;
+  }
+
+  /* SHOW hamburger button on mobile */
+  .nav-toggle-label {
+    display: block !important;
+    cursor: pointer;
+    padding: 0.5em 0.7em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: transparent;
+    color: #666;
+    font-size: 1.3em;
+    line-height: 1;
+    transition: all 0.2s ease;
+    user-select: none;
+    margin-left: auto;
+
+    &:hover {
+      background: #f2f3f3;
+      border-color: #999;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .masthead__menu {
+    position: relative;
+  }
+
+  .greedy-nav {
+    width: 100%;
+  }
+
+  /* HIDE nav links by default on mobile */
+  .visible-links {
+    display: none !important;
+    position: absolute !important;
+    top: calc(100% + 0.8em) !important;
+    right: 0 !important;
+    background: #fff !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 3px !important;
+    min-width: 200px !important;
+    max-width: 250px !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    z-index: 100 !important;
+  }
+
+  /* SHOW nav when checkbox is checked */
+  .nav-toggle:checked ~ .visible-links {
+    display: flex !important;
+  }
+
+  /* Force ALL menu items to have consistent styling in mobile dropdown */
+  .masthead__menu-item,
+  .masthead__menu-item--active,
+  .masthead__menu-item.current,
+  li.masthead__menu-item {
+    display: block !important;
+    width: 100% !important;
+    border-bottom: 1px solid #f2f3f3 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    &:first-child {
+      border-top: none !important;
+    }
+
+    &:last-child {
+      border-bottom: none !important;
+    }
+
+    /* Force ALL links to have the same styling */
+    a,
+    a:link,
+    a:visited,
+    a:active {
+      display: block !important;
+      padding: 0.75em 1em !important;
+      margin: 0 !important;
+      font-size: 0.9em !important;
+      font-weight: 400 !important;
+      font-style: normal !important;
+      white-space: normal !important;
+      background: transparent !important;
+      background-color: transparent !important;
+      text-align: left !important;
+      color: #666 !important;
+      text-decoration: none !important;
+      border: none !important;
+      box-shadow: none !important;
+
+      &:hover {
+        background: #f9f9f9 !important;
+        background-color: #f9f9f9 !important;
+        color: #52adc8 !important;
+      }
+    }
+  }
+}

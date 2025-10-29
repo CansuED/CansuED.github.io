@@ -1,20 +1,17 @@
-# main links links
 main:
-#main:
- - title: "Research"
-  url: /research/
-
-- title: "Lab"
-   url: /lab/    
-
- - title: "Teaching"
-    url: /teaching/    
-    
- - title: "News"
-  url: /news/
-        
-  - title: "Misc"
-    url: /misc/
-    
+  - title: "About"
+    url: /about/
+  - title: "Research"
+    url: /research/
+  - title: "Publications"
+    url: /publications/
+  - title: "Teaching"
+    url: /teaching/
+  - title: "Service"
+    url: /service/
+  - title: "D^4 Sustainable Futures"
+    url: /lab/
+  - title: "Students"
+    url: /students/
   - title: "Contact"
     url: /contact/

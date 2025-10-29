@@ -17,15 +17,35 @@ layout: compress
     {% include masthead.html %}
 
     {{ content }}
-
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
-
     {% include scripts.html %}
+
+    <script>
+    // Optional: Close mobile menu when a link is clicked
+    (function() {
+      const navLinks = document.querySelectorAll('.masthead__menu-item:not(.masthead__menu-item--lg) a');
+      const navToggle = document.getElementById('nav-toggle');
+      
+      if (navLinks && navToggle) {
+        navLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            navToggle.checked = false;
+          });
+        });
+      }
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        const nav = document.querySelector('.greedy-nav');
+        const toggle = document.querySelector('.nav-toggle-label');
+        
+        if (navToggle && navToggle.checked && 
+            !nav.contains(e.target) && 
+            e.target !== toggle) {
+          navToggle.checked = false;
+        }
+      });
+    })();
+    </script>
 
   </body>
 </html>
