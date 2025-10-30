@@ -6,7 +6,6 @@ author_profile: false
 classes: wide
 ---
 
-**Contact Information**
 
 DeGroote School of Business \\
 \newline McMaster University \\
