@@ -6,6 +6,8 @@ author_profile: false
 classes: wide
 ---
 
+Welcome to D^4 (**D**igital, **D**ata, **D**esign, and **D**evelopment) Sustainable Futures Lab!
+
 <div class="lab-content">
   <h1>
     Team
