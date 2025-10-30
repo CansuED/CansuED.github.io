@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an [Assistant Professor of Information Systems](https://degroote.mcmaster.ca/profiles/ekmekcic/) in the DeGroote School of Business at McMaster University in Hamilton, Ontario, Canada. \\
+I am an [Assistant Professor of Information Systems](https://degroote.mcmaster.ca/profiles/ekmekcic/) in the DeGroote School of Business at McMaster University in Hamilton, Ontario, Canada. 
 
 At McMaster, I direct **D^4 Sustainable Futures Lab**. I am also affiliated with the [McMaster Institute for Research on Aging (MIRA)](https://mira.mcmaster.ca/our-faculty/cansu-ekmekcioglu/) and [The McMaster Centre for Research on Employment and Work (MCREW)](https://mcrew.ca/).
 
