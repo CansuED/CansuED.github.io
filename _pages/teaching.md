@@ -7,16 +7,14 @@ classes: wide
 ---
 
 
-**DeGroote School of Business, McMaster University, Canada** 
-
+# McMaster University, Canada
 Course Developer & Instructor
 - Information Systems in Management (Undergraduate)
 
 Course Developer & Instructor
 - Ethics & Regulatory Frameworks in Artificial Intelligence and Analytics (Graduate)
 
-**University of Toronto, Canada**
-
+# University of Toronto, Canada 
 Teaching Assistant
-- Computers and Society (Undergraduate)
-- Is Internet Green? (Undergraduate)
+- Computers and Society, Department of Computer Science (Undergraduate)
+- Is Internet Green?, School of Environment (Undergraduate)
