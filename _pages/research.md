@@ -12,8 +12,9 @@ My current research explores the role of artificial intelligence in public servi
 
 ## Research Interests
 
-* Human-computer interaction
-* Data studies
 * Future of work
-* Data, technology, work, and organizations
-* Information and communication technologies for development
+* Data, data practices, data work
+* Technology, work, and organizations
+* Community engaged research
+* Non-profits, mission driven organizations
+* Information and Communication Technologies for Development (ICTD)
