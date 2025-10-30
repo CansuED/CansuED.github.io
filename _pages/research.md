@@ -10,7 +10,7 @@ My research examines the use and design of digital technologies to drive sustain
 
 My current research explores the role of artificial intelligence in public service delivery. I am the Principal Investigator on Insight Development Grant funded by the Social Sciences and Humanities Research Council of Canada (SSHRC) and the recipient of numerous competitive internal grants and awards from McMaster University.
 
-## Research Interests
+### Research Interests
 
 * Future of work
 * Data, data practices, data work
