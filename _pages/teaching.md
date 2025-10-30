@@ -6,7 +6,7 @@ author_profile: false
 classes: wide
 ---
 
-I teach graduate and undergraduate courses in information systems with a focus on AI ethics.
+I teach graduate and undergraduate courses in information systems with a focus on data, data management, and AI ethics.
 
 # McMaster University, Canada
 Course Developer & Instructor
