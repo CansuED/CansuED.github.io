@@ -13,6 +13,7 @@ Course Developer & Instructor
 - Information Systems in Management (Undergraduate)
 Course Developer & Instructor
 - Ethics & Regulatory Frameworks in Artificial Intelligence and Analytics (Graduate)
+
 ## University of Toronto, Canada 
 Teaching Assistant
 - Computers and Society, Department of Computer Science (Undergraduate)
