@@ -11,7 +11,6 @@ I teach graduate and undergraduate courses in information systems with a focus o
 ## McMaster University, Canada 
 Course Developer & Instructor
 - Information Systems in Management (Undergraduate)
-Course Developer & Instructor
 - Ethics & Regulatory Frameworks in Artificial Intelligence and Analytics (Graduate)
 
 ## University of Toronto, Canada 
