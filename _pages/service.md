@@ -11,6 +11,7 @@ classes: wide
 
 # Program Committees, Journals, and Conferences
 - ACM (Association for Computing Machinery) CHI conference on Human Factors in Computing Systems 2025
+- ACM SIGCAS/SIGCHI Conference on Computing and Sustainable Societies (COMPASS) 2025
 
 # Leadership
 - Canada Chapter Lead, Association for Information Science and Technology 2025-2026
