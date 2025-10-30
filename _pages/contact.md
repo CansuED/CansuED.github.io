@@ -17,7 +17,7 @@ DSB 413 \\
 Hamilton, ON, L8S 4L8, CANADA
 
 ### Email
-ekmekcic[at]mcmaster.ca \\
+ekmekcic[at]mcmaster.ca
 
 ### Phone
 (905) 525-9140 x 28964
