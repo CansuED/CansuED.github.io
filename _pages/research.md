@@ -12,11 +12,8 @@ My academic articles have been published in venues including Journal of the Asso
 
 My current research explores the role of artificial intelligence in public service delivery. I am the Principal Investigator on Insight Development Grant funded by the Social Sciences and Humanities Research Council of Canada (SSHRC) and the recipient of numerous competitive internal grants and awards from McMaster University.
 
-### Research Interests
+**Research Interests**: Technology, work, and organizations; Data, data practices, data work; Community engaged research; Non-profits, mission driven organizations; Information and Communication Technologies for Development (ICTD)
 
-* Future of work
-* Data, data practices, data work
-* Technology, work, and organizations
-* Community engaged research
-* Non-profits, mission driven organizations
-* Information and Communication Technologies for Development (ICTD)
+
+
+
