@@ -26,10 +26,7 @@ We welcome partnerships with government agencies, international organizations, n
 #### PhD Students
 
 - Arezoo Karbasi Ahvazi, Information Systems, McMaster University
-- Pelin Gul, Sociology, University of Toronto \\
-    \begin{description}
-     \item[Project:] Entrepreneurship in Post-Disaster Context 
-     \end{description}
+- Pelin Gul, Sociology, University of Toronto
 
 #### Undergraduate Students
 
