@@ -12,7 +12,7 @@ I am an [Assistant Professor of Information Systems](https://degroote.mcmaster.c
 
 At McMaster, I direct **D^4 Sustainable Futures Lab**. 
 
-I lead \underline{Sustainable Futures Hub} at [The McLean Centre for Collaborative Discovery (MCCD)](https://degroote.mcmaster.ca/about/mclean-centre-for-collaborative-discovery/). I also co-lead McMaster University’s efforts to develop and advance the \underline{Plenary Health} graduate program.
+I lead *Sustainable Futures Hub* at [The McLean Centre for Collaborative Discovery (MCCD)](https://degroote.mcmaster.ca/about/mclean-centre-for-collaborative-discovery/). I also co-lead McMaster University’s efforts to develop and advance the *Plenary Health* graduate program.
 
 I am a member of [McMaster Institute for Research on Aging (MIRA)](https://mira.mcmaster.ca/our-faculty/cansu-ekmekcioglu/) and [The McMaster Centre for Research on Employment and Work (MCREW)](https://mcrew.ca/).
 
