@@ -28,6 +28,7 @@ My SSHRC-funded research explores the current state of GenAI in the refugee and 
 Supported by MIRA funding, my research examines how older immigrants experience and engage with platform-mediated gig work amid changing physical, mental, and technological mobility demands. The study seeks to deepen understanding of their mobility experiences and aspirations within platform-based gig economies.
 
 * **Dissertation: Welcoming Infrastructures: Designing for Accountability in the Settlement Service Work in Canada**
+  
 Drawing on the literatures from information science, data studies and human-computer interaction, [my dissertation research](https://www.proquest.com/docview/3128023344?pq-origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses) at the University of Toronto demonstrates how the sustainable digital transformation of immigrant-serving agencies and the social and economic integration of their newcomer clients into Canadian society are interrelated. Critically, it highlights why promoting the responsible design and use of technologies, including Artificial Intelligence, in settlement service delivery is a necessary step in addressing social and digital inequities and the data privacy needs and challenges of disadvantaged groups. Moreover, my dissertation demonstrates broader challenges impacting the sustainable social and economic integration of new Canadians, including digital inclusion and equitable access to digital literacy and resources.
 
 ### Sustainability & Socially and Digitally Inclusive Communities
