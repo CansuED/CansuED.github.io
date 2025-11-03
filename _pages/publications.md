@@ -46,22 +46,22 @@ Below is a selection of my publications, with links to papers or sites where man
 
 ### POLICY REPORTS
 
-* Ekmekcioglu, C., Black, R., Campana, M. (2022). [“The Future is Now: How to Ensure High-Quality and Inclusive Settlement Services.”](https://www.amssa.org/wp-content/uploads/2022/06/NSCT-Report-Final-EN-Apr-29-2022.pdf) Commissioned by Immigration, Refugees and Citizenship Canada (IRCC), Government of Canada 
+* Ekmekcioglu, C., Black, R., Campana, M. (2022). [The Future is Now: How to Ensure High-Quality and Inclusive Settlement Services.](https://www.amssa.org/wp-content/uploads/2022/06/NSCT-Report-Final-EN-Apr-29-2022.pdf) Commissioned by Immigration, Refugees and Citizenship Canada (IRCC), Government of Canada 
 
-* Lui, J.L., Ekmekcioglu, C., Campana, M. (2021). [“From Silos to Solutions: Toward Sustainable and Equitable Hybrid Service Delivery in the Immigrant and Refugee-Serving Sector in Canada.”](https://www.amssa.org/wp-content/uploads/2021/10/EN-Settlement-Sector-Technology-Task-Group-final-report-and-recommendations.pdf) Commissioned by Immigration, Refugees and Citizenship Canada (IRCC), Government of Canada  
+* Lui, J.L., Ekmekcioglu, C., Campana, M. (2021). [From Silos to Solutions: Toward Sustainable and Equitable Hybrid Service Delivery in the Immigrant and Refugee-Serving Sector in Canada.](https://www.amssa.org/wp-content/uploads/2021/10/EN-Settlement-Sector-Technology-Task-Group-final-report-and-recommendations.pdf) Commissioned by Immigration, Refugees and Citizenship Canada (IRCC), Government of Canada  
 
 ### POSITION PAPERS
 
-* Ekmekcioglu, C. (2025). Toward Sustainable Data Governance in Refugee and Immigrant Serving Sector in Canada. Information Matters, 5(5).
+* Ekmekcioglu, C. (2025). [Toward Sustainable Data Governance in Refugee and Immigrant Serving Sector in Canada](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5260351). Information Matters, 5(5).
 
-* Ekmekcioglu, C., Dahya, N., Decarpentrie, L., Arvisais, O. (2021). “Time, Temporality, and Technology in Remote Participatory Research: Implications for HCI Research in Forced Migration.” CHI 2021 Workshop on Migration and Mobilities in HCI: Rethinking Boundaries, Methods, and Impact 
+* Ekmekcioglu, C., Dahya, N., Decarpentrie, L., Arvisais, O. (2021). [Time, Temporality, and Technology in Remote Participatory Research: Implications for HCI Research in Forced Migration](https://www.cs.toronto.edu/~dsabie/MigrationWorkshop/Submissions/Ekmekcioglu-et-al_2021.pdf). CHI 2021 Workshop on Migration and Mobilities in HCI: Rethinking Boundaries, Methods, and Impact 
 
-* Ekmekcioglu, C. (2020). “Humanitarian Innovation and AI Ethics: Implications for Refugee Settings.” Ethical Innovation for Artificial Intelligence, University of Toronto & University of College London
+* Ekmekcioglu, C. (2020). [Humanitarian Innovation and AI Ethics: Implications for Refugee Settings](https://ei4ai.wordpress.com/2020/10/19/humanitarian-innovation-and-ai-ethics-implications-for-refugee-settings-by-cansu-e-dedeoglu-faculty-of-information-university-of-toronto/) Ethical Innovation for Artificial Intelligence, University of Toronto & University of College London
 
 ### KNOWLEDGE MOBILIZATION
 
 * Hynie, M., Kilicaslan, G., Ekmekcioglu, C., Karim, R., Taylor, P., Scantlebury, T., Heins, C., McDonough, L., Cascante, I. (2021). “Information Access and Resilience for Newcomer Groups.”. BMRC-IRMU Research Digest 
 
-* Dahya, N., Ekmekcioglu, C., Arvisais, O., Decarpentrie, L. (2021). “In refugee camps, access to internet supports research during the coronavirus pandemic.” The Conversation 
+* Dahya, N., Ekmekcioglu, C., Arvisais, O., Decarpentrie, L. (2021). [In refugee camps, access to internet supports research during the coronavirus pandemic.](https://theconversation.com/in-refugee-camps-access-to-internet-supports-research-during-the-coronavirus-pandemic-146468) The Conversation 
 
 
