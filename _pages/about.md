@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an [Assistant Professor of Information Systems](https://degroote.mcmaster.ca/profiles/ekmekcic/) in the DeGroote School of Business at McMaster University. I direct **D^4 Sustainable Futures Lab**. 
+I am an [Assistant Professor of Information Systems](https://degroote.mcmaster.ca/profiles/ekmekcic/) in the DeGroote School of Business at McMaster University. I direct [**D^4 Sustainable Futures Lab**](lab.md).
 
 My research examines the use and design of digital technologies to drive managerial, organizational, and community growth, with a particular focus on work and sustainability in a global context. My academic contributions have been published in venues including Journal of the Association for Information Science and Technology, ACM Transactions on Computer-Human Interaction (TOCHI), and the Proceedings of the ACM on Human-Computer Interaction. I am the Canada Chapter Lead of [Association for Information Science and Technology (ASIST)](https://www.asist.org/) in 2025-2026.
 
