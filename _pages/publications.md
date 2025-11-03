@@ -46,7 +46,7 @@ Below is a selection of my publications, with links to papers or sites where man
 
 ### POLICY REPORTS
 
-* Ekmekcioglu, C., Black, R., Campana, M. (2022). “The Future is Now: How to Ensure High-Quality and Inclusive Settlement Services.” Commissioned by Immigration, Refugees and Citizenship Canada (IRCC), Government of Canada [https://www.amssa.org/wp-content/uploads/2022/06/NSCT-Report-Final-EN-Apr-29-2022.pdf](https://www.amssa.org/wp-content/uploads/2022/06/NSCT-Report-Final-EN-Apr-29-2022.pdf)
+* Ekmekcioglu, C., Black, R., Campana, M. (2022). [“The Future is Now: How to Ensure High-Quality and Inclusive Settlement Services.”](files/Ekmekcioglu-et-al_2022.pdf) Commissioned by Immigration, Refugees and Citizenship Canada (IRCC), Government of Canada 
 
 * Lui, J.L., Ekmekcioglu, C., Campana, M. (2021). “From Silos to Solutions: Toward Sustainable and Equitable Hybrid Service Delivery in the Immigrant and Refugee-Serving Sector in Canada.” Commissioned by Immigration, Refugees and Citizenship Canada (IRCC), Government of Canada  
 
