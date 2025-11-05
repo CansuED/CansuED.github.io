@@ -12,7 +12,6 @@ layout: compress
   </head>
 
   <body>
-
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
@@ -20,9 +19,39 @@ layout: compress
     {% include scripts.html %}
 
     <script>
-    // Optional: Close mobile menu when a link is clicked
     (function() {
-      const navLinks = document.querySelectorAll('.masthead__menu-item:not(.masthead__menu-item--lg) a');
+      function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        document.body.setAttribute('data-theme', theme);
+      }
+      
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      applyTheme(currentTheme);
+
+      setTimeout(function() {
+        const themeToggle = document.createElement('button');
+        themeToggle.className = 'theme-toggle';
+        themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+        themeToggle.innerHTML = '<span class="theme-icon">' + (currentTheme === 'dark' ? '☀️' : '🌙') + '</span>';
+        
+        const mastheadMenu = document.querySelector('.masthead__menu');
+        if (mastheadMenu) {
+          mastheadMenu.appendChild(themeToggle);
+        }
+
+        themeToggle.addEventListener('click', function() {
+          const theme = document.documentElement.getAttribute('data-theme');
+          const newTheme = theme === 'light' ? 'dark' : 'light';
+          
+          applyTheme(newTheme);
+          localStorage.setItem('theme', newTheme);
+          
+          const themeIcon = themeToggle.querySelector('.theme-icon');
+          themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        });
+      }, 100);
+
+      const navLinks = document.querySelectorAll('.masthead__menu-item a');
       const navToggle = document.getElementById('nav-toggle');
       
       if (navLinks && navToggle) {
@@ -33,7 +62,6 @@ layout: compress
         });
       }
 
-      // Close menu when clicking outside
       document.addEventListener('click', (e) => {
         const nav = document.querySelector('.greedy-nav');
         const toggle = document.querySelector('.nav-toggle-label');
@@ -46,6 +74,5 @@ layout: compress
       });
     })();
     </script>
-
   </body>
 </html>

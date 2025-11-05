@@ -1,0 +1,229 @@
+// Team Page Styles
+.team-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.team-intro {
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e8e8e8;
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .team-links {
+    font-size: 0.9rem;
+    
+    a {
+      color: #52adc8;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Fix for anchor links - offset for fixed header
+h2[id] {
+  scroll-margin-top: 100px;
+}
+
+.team-member {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #f0f0f0;
+  
+  .member-photo {
+    flex-shrink: 0;
+    
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #e8e8e8;
+    }
+  }
+  
+  .member-info {
+    flex: 1;
+    
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin: 0 0 0.3rem 0;
+    }
+    
+    .member-role {
+      font-size: 0.95rem;
+      color: #52adc8;
+      font-weight: 500;
+      margin: 0 0 0.2rem 0;
+    }
+    
+    .member-affiliation {
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      margin: 0 0 0.8rem 0;
+    }
+    
+    .member-contact {
+      font-size: 0.9rem;
+      margin: 0 0 0.8rem 0;
+      
+      a {
+        color: #52adc8;
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
+      margin: 0;
+    }
+  }
+}
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.student-card {
+  padding: 1.2rem;
+  background: #fafafa;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    border-color: #52adc8;
+    box-shadow: 0 2px 8px rgba(82, 173, 200, 0.1);
+  }
+  
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 0.8rem;
+    border: 2px solid #e8e8e8;
+    display: block;
+  }
+  
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 0.3rem 0;
+  }
+  
+  .student-degree {
+    font-size: 0.85rem;
+    color: #52adc8;
+    font-weight: 500;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .student-research {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+  }
+}
+
+.alumni-list {
+  margin-bottom: 2.5rem;
+  
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 1.5rem 0 0.5rem 0;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      padding: 0.4rem 0;
+      font-size: 0.9rem;
+      color: #555;
+      border-bottom: 1px solid #f5f5f5;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      strong {
+        color: #2c3e50;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.team-join {
+  padding: 1.5rem 0;
+  border-top: 1px solid #e8e8e8;
+  text-align: center;
+  
+  p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+  }
+  
+  a {
+    color: #52adc8;
+    text-decoration: none;
+    font-weight: 500;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    .member-photo {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .student-grid {
+    grid-template-columns: 1fr;
+  }
+}
