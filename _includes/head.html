@@ -3,10 +3,15 @@
 <meta charset="utf-8">
 
 <script>
-// Apply theme before page renders
 (function() {
-  const theme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', theme);
+  if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+    try {
+      const theme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    } catch (e) {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  }
 })();
 </script>
 

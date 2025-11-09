@@ -14,30 +14,59 @@ layout: compress
     {{ content }}
     {% include scripts.html %}
     <script>
-    (function() {
+    // Wait for DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
       function applyTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
         document.body.setAttribute('data-theme', theme);
       }
       
-      // Apply theme immediately on load
-      const currentTheme = localStorage.getItem('theme') || 'light';
+      // Check if localStorage is available
+      function getTheme() {
+        if (typeof localStorage !== 'undefined') {
+          try {
+            return localStorage.getItem('theme') || 'light';
+          } catch (e) {
+            return 'light';
+          }
+        }
+        return 'light';
+      }
+      
+      function setTheme(theme) {
+        if (typeof localStorage !== 'undefined') {
+          try {
+            localStorage.setItem('theme', theme);
+          } catch (e) {
+            // localStorage not available
+          }
+        }
+      }
+      
+      // Apply theme on load
+      const currentTheme = getTheme();
       applyTheme(currentTheme);
       
-      // Set initial icon
+      // Set up theme toggle button
       const themeToggle = document.getElementById('theme-toggle-btn');
-      const themeIcon = themeToggle.querySelector('.theme-icon');
-      themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
-      
-      // Add click handler
-      themeToggle.addEventListener('click', function() {
-        const theme = document.documentElement.getAttribute('data-theme');
-        const newTheme = theme === 'light' ? 'dark' : 'light';
+      if (themeToggle) {
+        const themeIcon = themeToggle.querySelector('.theme-icon');
+        if (themeIcon) {
+          themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+        }
         
-        applyTheme(newTheme);
-        localStorage.setItem('theme', newTheme);
-        themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-      });
+        // Add click handler
+        themeToggle.addEventListener('click', function() {
+          const theme = document.documentElement.getAttribute('data-theme');
+          const newTheme = theme === 'light' ? 'dark' : 'light';
+          
+          applyTheme(newTheme);
+          setTheme(newTheme);
+          if (themeIcon) {
+            themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+          }
+        });
+      }
       
       // Handle nav toggle
       const navLinks = document.querySelectorAll('.masthead__menu-item a');
@@ -62,7 +91,7 @@ layout: compress
           navToggle.checked = false;
         }
       });
-    })();
+    });
     </script>
   </body>
 </html>
