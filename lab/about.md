@@ -1,7 +1,7 @@
 ---
 layout: lab
 title: "D⁴ Sustainable Futures"
-permalink: /lab/about
+permalink: /lab/about/
 author_profile: false
 classes: wide
 ---
