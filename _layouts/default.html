@@ -1,74 +1,56 @@
 ---
 layout: compress
 ---
+
 {% include base_path %}
+
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
   </head>
+
   <body>
     {% include browser-upgrade.html %}
     {% include masthead.html %}
+
     {{ content }}
     {% include scripts.html %}
+
     <script>
-    // Wait for DOM to be fully loaded
-    document.addEventListener('DOMContentLoaded', function() {
+    (function() {
       function applyTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
         document.body.setAttribute('data-theme', theme);
       }
       
-      // Check if localStorage is available
-      function getTheme() {
-        if (typeof localStorage !== 'undefined') {
-          try {
-            return localStorage.getItem('theme') || 'light';
-          } catch (e) {
-            return 'light';
-          }
-        }
-        return 'light';
-      }
-      
-      function setTheme(theme) {
-        if (typeof localStorage !== 'undefined') {
-          try {
-            localStorage.setItem('theme', theme);
-          } catch (e) {
-            // localStorage not available
-          }
-        }
-      }
-      
-      // Apply theme on load
-      const currentTheme = getTheme();
+      const currentTheme = localStorage.getItem('theme') || 'light';
       applyTheme(currentTheme);
-      
-      // Set up theme toggle button
-      const themeToggle = document.getElementById('theme-toggle-btn');
-      if (themeToggle) {
-        const themeIcon = themeToggle.querySelector('.theme-icon');
-        if (themeIcon) {
-          themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
-        }
+
+      setTimeout(function() {
+        const themeToggle = document.createElement('button');
+        themeToggle.className = 'theme-toggle';
+        themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+        themeToggle.innerHTML = '<span class="theme-icon">' + (currentTheme === 'dark' ? '☀️' : '🌙') + '</span>';
         
-        // Add click handler
+        const mastheadMenu = document.querySelector('.masthead__menu');
+        if (mastheadMenu) {
+          mastheadMenu.appendChild(themeToggle);
+        }
+
         themeToggle.addEventListener('click', function() {
           const theme = document.documentElement.getAttribute('data-theme');
           const newTheme = theme === 'light' ? 'dark' : 'light';
           
           applyTheme(newTheme);
-          setTheme(newTheme);
-          if (themeIcon) {
-            themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-          }
+          localStorage.setItem('theme', newTheme);
+          
+          const themeIcon = themeToggle.querySelector('.theme-icon');
+          themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
         });
-      }
-      
-      // Handle nav toggle
+      }, 100);
+
       const navLinks = document.querySelectorAll('.masthead__menu-item a');
       const navToggle = document.getElementById('nav-toggle');
       
@@ -79,8 +61,7 @@ layout: compress
           });
         });
       }
-      
-      // Close nav on outside click
+
       document.addEventListener('click', (e) => {
         const nav = document.querySelector('.greedy-nav');
         const toggle = document.querySelector('.nav-toggle-label');
@@ -91,7 +72,7 @@ layout: compress
           navToggle.checked = false;
         }
       });
-    });
+    })();
     </script>
   </body>
 </html>
