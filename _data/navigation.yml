@@ -15,3 +15,11 @@ main:
     url: /students/
   - title: "Contact"
     url: /contact/
+
+lab:
+  - title: "About"
+    url: /lab/about/
+  - title: "Team"
+    url: /lab/team/
+  - title: "Back"
+    url: /

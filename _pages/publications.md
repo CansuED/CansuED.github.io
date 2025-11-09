@@ -63,5 +63,3 @@ Below is a selection of my publications, with links to papers or sites where man
 * Hynie, M., Kilicaslan, G., Ekmekcioglu, C., Karim, R., Taylor, P., Scantlebury, T., Heins, C., McDonough, L., Cascante, I. (2021). “Information Access and Resilience for Newcomer Groups.”. BMRC-IRMU Research Digest 
 
 * Dahya, N., Ekmekcioglu, C., Arvisais, O., Decarpentrie, L. (2021). [In refugee camps, access to internet supports research during the coronavirus pandemic.](https://theconversation.com/in-refugee-camps-access-to-internet-supports-research-during-the-coronavirus-pandemic-146468) The Conversation 
-
-

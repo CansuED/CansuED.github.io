@@ -3,7 +3,7 @@
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="site-title">
-      <a href="{{ base_path }}/">{{ site.title }}</a>
+      <a href="{{ base_path }}/lab/">D^4 Sustainable Futures</a>
     </div>
     
     <div class="masthead__menu">
@@ -15,7 +15,7 @@
         </label>
         
         <ul class="visible-links">
-          {% for link in site.data.navigation.main %}
+          {% for link in site.data.navigation.lab %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
@@ -25,7 +25,7 @@
             {% assign current_class = '' %}
             {% if page.url == link.url %}
               {% assign current_class = 'masthead__menu-item--active' %}
-            {% elsif page.url contains link.url and link.url != '/' %}
+            {% elsif page.url contains link.url and link.url != '/' and link.url != '/lab/' %}
               {% assign current_class = 'masthead__menu-item--active' %}
             {% else %}
               {% assign current_class = 'masthead__menu-item' %}

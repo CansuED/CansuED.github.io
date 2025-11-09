@@ -11,19 +11,26 @@
   height: calc(100vh - 175px);
 
   .profile-image {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    margin: 0 auto 1.2em auto;
-    display: block;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
-    
-    &:hover {
-      transform: scale(1.03);
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin: 0 auto 1.2em auto;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: antialiased;
+      transform: translateZ(0);
+      will-change: transform;
+      
+      &:hover {
+        transform: scale(1.03) translateZ(0);
+      }
     }
-  }
 
   h1 {
     font-size: 2.5em;

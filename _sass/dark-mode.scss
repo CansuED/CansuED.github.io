@@ -730,3 +730,108 @@ footer,
     color: #888 !important;
   }
 }
+
+// ============================================
+// LAB PAGE DARK MODE STYLES
+// ============================================
+
+.lab-hero {
+  transition: background-color 0.45s ease;
+}
+
+[data-theme="dark"] .lab-hero {
+  background-color: #1a1a1a !important;
+}
+
+.lab-hero-title {
+  transition: color 0.45s ease;
+}
+
+[data-theme="dark"] .lab-hero-title {
+  color: #e8e8e8 !important;
+}
+
+.lab-hero-subtitle {
+  transition: color 0.45s ease;
+}
+
+[data-theme="dark"] .lab-hero-subtitle {
+  color: #d0d0d0 !important;
+}
+
+.lab-hero-scroll svg {
+  transition: color 0.45s ease;
+}
+
+[data-theme="dark"] .lab-hero-scroll svg {
+  color: #b0b0b0 !important;
+}
+
+// Lab content pages
+[data-theme="dark"] .lab-content {
+  background-color: #1a1a1a !important;
+  
+  h1 {
+    color: #e8e8e8 !important;
+    border-bottom-color: #5bc0de !important;
+  }
+
+  h2 {
+    color: #e8e8e8 !important;
+  }
+
+  h3 {
+    color: #5bc0de !important;
+  }
+
+  p {
+    color: #d0d0d0 !important;
+  }
+
+  ul li {
+    color: #b0b0b0 !important;
+    
+    &::marker {
+      color: #5bc0de !important;
+    }
+  }
+
+  strong {
+    color: #e8e8e8 !important;
+  }
+
+  a {
+    color: #5bc0de !important;
+
+    &:hover {
+      color: #7dd3f0 !important;
+      border-bottom-color: #7dd3f0 !important;
+    }
+  }
+
+  hr {
+    border-top-color: #333333 !important;
+  }
+}
+
+// Lab member cards
+[data-theme="dark"] .lab-member-card {
+  background: #242424 !important;
+  border-color: #2a2a2a !important;
+
+  h3 {
+    color: #e8e8e8 !important;
+  }
+
+  .member-role {
+    color: #5bc0de !important;
+  }
+
+  .member-affiliation {
+    color: #b0b0b0 !important;
+  }
+
+  p {
+    color: #d0d0d0 !important;
+  }
+}
