@@ -40,3 +40,30 @@
     </div>
   </div>
 </div>
+
+<script>
+(function() {
+  const mastheadMenu = document.querySelector('.masthead__menu');
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  
+  if (mastheadMenu) {
+    const themeToggle = document.createElement('button');
+    themeToggle.className = 'theme-toggle';
+    themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+    themeToggle.innerHTML = '<span class="theme-icon">' + (currentTheme === 'dark' ? '☀️' : '🌙') + '</span>';
+    mastheadMenu.appendChild(themeToggle);
+    
+    themeToggle.addEventListener('click', function() {
+      const theme = document.documentElement.getAttribute('data-theme');
+      const newTheme = theme === 'light' ? 'dark' : 'light';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      document.body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      const themeIcon = themeToggle.querySelector('.theme-icon');
+      themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    });
+  }
+})();
+</script>
