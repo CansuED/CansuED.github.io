@@ -835,3 +835,53 @@ footer,
     color: #d0d0d0 !important;
   }
 }
+
+// Service Page Dark Mode Styles - Enhanced
+[data-theme="dark"] {
+  .service-intro {
+    border-bottom-color: #2a2a2a;
+    
+    p {
+      color: #b8b8b8;
+    }
+  }
+  
+  .service-container h2 {
+    color: #f0f0f0;
+    font-weight: 600;
+  }
+  
+  .service-item {
+    border-bottom-color: #2a2a2a;
+    background: transparent;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    padding: 1.2rem 0.8rem;
+    margin-left: -0.8rem;
+    margin-right: -0.8rem;
+    
+    &:hover {
+      background: rgba(82, 173, 200, 0.05);
+      border-bottom-color: rgba(82, 173, 200, 0.2);
+      transform: translateX(4px);
+    }
+    
+    h3 {
+      color: #f0f0f0;
+      font-weight: 500;
+    }
+    
+    .service-role {
+      color: #64c9e6;
+      background: rgba(82, 173, 200, 0.12);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+    
+    .service-year {
+      color: #8a8a8a;
+      font-weight: 500;
+    }
+  }
+}
