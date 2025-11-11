@@ -1,0 +1,110 @@
+// Research Page Styles - Clean & Professional
+.research-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.research-intro {
+  padding: 1.5rem 0;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid #e8e8e8;
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 1rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.research-container h2 {
+  font-size: 1.4rem;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+  color: #2c3e50;
+  font-weight: 600;
+  border-top: 2px solid #e8e8e8;
+  
+  &:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+.research-section {
+  margin-bottom: 3rem;
+  
+  .section-intro {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+}
+
+.research-project {
+  padding: 1.5rem 1.2rem;
+  margin-bottom: 1.2rem;
+  background: #fafafa;
+  border-left: 3px solid #e8e8e8;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(82, 173, 200, 0.04);
+    border-left-color: #52adc8;
+    transform: translateX(4px);
+  }
+  
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 0.8rem 0;
+    line-height: 1.4;
+  }
+  
+  p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #666;
+    margin: 0;
+    
+    a {
+      color: #52adc8;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        color: #3d8fa3;
+        border-bottom-color: #3d8fa3;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .research-container h2 {
+    font-size: 1.25rem;
+  }
+  
+  .research-project {
+    padding: 1.2rem 1rem;
+    
+    h3 {
+      font-size: 1rem;
+    }
+    
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}

@@ -912,10 +912,12 @@ footer,
   }
   
   .publication-item {
-    border-bottom-color: #252525;
+    background: #242424;
+    border-left-color: #333;
     
     &:hover {
-      background: rgba(82, 173, 200, 0.05);
+      background: rgba(82, 173, 200, 0.08);
+      border-left-color: #64c9e6;
     }
     
     .pub-authors {
@@ -923,7 +925,8 @@ footer,
     }
     
     .pub-title {
-      color: #f0f0f0;
+      color: #e8e8e8;
+      font-weight: 500;
     }
     
     .pub-venue {
@@ -936,11 +939,60 @@ footer,
     
     .pub-link {
       color: #64c9e6;
-      background: rgba(82, 173, 200, 0.12);
       
       &:hover {
-        background: rgba(82, 173, 200, 0.2);
         color: #7dd3f0;
+        border-bottom-color: #7dd3f0;
+      }
+    }
+  }
+}
+
+// Research Page Dark Mode Styles - Enhanced
+[data-theme="dark"] {
+  .research-intro {
+    border-bottom-color: #2a2a2a;
+    
+    p {
+      color: #b8b8b8;
+    }
+  }
+  
+  .research-container h2 {
+    color: #f0f0f0;
+    font-weight: 600;
+    border-top-color: #2a2a2a;
+  }
+  
+  .research-section {
+    .section-intro {
+      color: #b8b8b8;
+    }
+  }
+  
+  .research-project {
+    background: #242424;
+    border-left-color: #333;
+    
+    &:hover {
+      background: rgba(82, 173, 200, 0.08);
+      border-left-color: #64c9e6;
+    }
+    
+    h3 {
+      color: #f0f0f0;
+    }
+    
+    p {
+      color: #b8b8b8;
+      
+      a {
+        color: #64c9e6;
+        
+        &:hover {
+          color: #7dd3f0;
+          border-bottom-color: #7dd3f0;
+        }
       }
     }
   }

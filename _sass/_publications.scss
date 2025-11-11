@@ -1,4 +1,3 @@
-// Publications Page Styles - Minimal & Professional
 .publications-container {
   max-width: 900px;
   margin: 0 auto;
@@ -12,9 +11,13 @@
   
   p {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #666;
-    margin: 0;
+    margin-bottom: 1rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
     
     a {
       color: #52adc8;
@@ -51,44 +54,46 @@
 }
 
 .publication-item {
-  padding: 1.2rem 0.8rem;
-  margin-bottom: 1.5rem;
-  margin-left: -0.8rem;
-  margin-right: -0.8rem;
-  border-bottom: 1px solid #f0f0f0;
+  padding: 1.5rem 1.2rem;
+  margin-bottom: 1.2rem;
+  background: #fafafa;
+  border-left: 3px solid #e8e8e8;
   border-radius: 4px;
-  background: transparent;
   transition: all 0.3s ease;
   
   &:last-child {
-    border-bottom: none;
+    margin-bottom: 0;
   }
   
   &:hover {
     background: rgba(82, 173, 200, 0.04);
+    border-left-color: #52adc8;
     transform: translateX(4px);
   }
   
   .pub-authors {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 0.4rem;
-    line-height: 1.4;
+    font-size: 0.88rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    font-weight: 400;
   }
   
   .pub-title {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     color: #2c3e50;
-    margin-bottom: 0.4rem;
-    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
   }
   
   .pub-venue {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: #52adc8;
-    font-style: italic;
-    margin-bottom: 0.5rem;
+    font-style: normal;
+    margin-bottom: 0.7rem;
+    line-height: 1.5;
+    font-weight: 400;
   }
   
   .pub-meta {
@@ -99,24 +104,21 @@
   }
   
   .pub-year {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #888;
     font-weight: 500;
   }
   
   .pub-link {
-    font-size: 0.8rem;
-    color: #2c8ca8;
+    font-size: 0.85rem;
+    color: #52adc8;
     text-decoration: none;
-    background: rgba(82, 173, 200, 0.1);
-    padding: 0.25rem 0.6rem;
-    border-radius: 4px;
-    font-weight: 500;
+    border-bottom: 1px solid transparent;
     transition: all 0.2s ease;
     
     &:hover {
-      background: rgba(82, 173, 200, 0.2);
-      color: #1f6d82;
+      color: #3d8fa3;
+      border-bottom-color: #3d8fa3;
     }
   }
 }
@@ -127,12 +129,10 @@
   }
   
   .publication-item {
-    padding: 1rem 0.4rem;
-    margin-left: -0.4rem;
-    margin-right: -0.4rem;
+    padding: 1.2rem 1rem;
     
     .pub-title {
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
     
     .pub-authors {
@@ -140,7 +140,7 @@
     }
     
     .pub-venue {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
     }
   }
 }
