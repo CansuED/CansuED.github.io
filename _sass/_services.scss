@@ -11,61 +11,66 @@
   
   p {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #666;
-    margin: 0;
+    margin-bottom: 1rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
 .service-container h2 {
   font-size: 1.4rem;
-  margin-top: 3rem;
-  margin-bottom: 1.2rem;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
   color: #2c3e50;
   font-weight: 600;
+  border-top: 2px solid #e8e8e8;
   
   &:first-of-type {
     margin-top: 0;
+    padding-top: 0;
+    border-top: none;
   }
 }
 
 .service-list {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .service-item {
-  padding: 1.2rem 0.8rem;
-  margin-bottom: 0;
-  margin-left: -0.8rem;
-  margin-right: -0.8rem;
-  border-bottom: 1px solid #e8e8e8;
+  padding: 1.5rem 1.2rem;
+  margin-bottom: 1.2rem;
+  background: #fafafa;
+  border-left: 3px solid #e8e8e8;
   border-radius: 4px;
-  background: transparent;
   transition: all 0.3s ease;
   
   &:last-child {
-    border-bottom: none;
+    margin-bottom: 0;
   }
   
   &:hover {
-    background: rgba(82, 173, 200, 0.08);
-    border-bottom-color: rgba(82, 173, 200, 0.3);
+    background: rgba(82, 173, 200, 0.04);
+    border-left-color: #52adc8;
     transform: translateX(4px);
-    box-shadow: 0 0 0 1px rgba(82, 173, 200, 0.15);
   }
   
   h3 {
     font-size: 1rem;
     font-weight: 500;
     color: #2c3e50;
-    margin: 0 0 0.6rem 0;
-    line-height: 1.4;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.5;
   }
   
   .service-meta {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1rem;
     flex-wrap: wrap;
   }
   
@@ -79,7 +84,7 @@
   }
   
   .service-year {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #888;
     font-weight: 500;
   }
@@ -91,12 +96,10 @@
   }
   
   .service-item {
-    padding: 1.2rem 0.4rem;
-    margin-left: -0.4rem;
-    margin-right: -0.4rem;
+    padding: 1.2rem 1rem;
     
     h3 {
-      font-size: 0.95rem;
+      font-size: 1rem;
     }
   }
 }

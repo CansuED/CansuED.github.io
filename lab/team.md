@@ -103,15 +103,14 @@ classes: wide
 
   <div class="collaborator-card">
     <div class="collaborator-photo">
-      <img src="/images/bio-photo-2.jpg" alt="Collaborator Name">
+      <img src="/images/Mana.jpg" alt="Collaborator Name">
     </div>
     <div class="collaborator-info">
       <h3>Mana Abolghasemi</h3>
       <p class="collaborator-role">Commerce</p>
       <p class="collaborator-affiliation">McMaster University</p>
       <p class="collaborator-contact">
-        <a href="#" target="_blank" rel="noopener noreferrer">Website</a> · 
-        <a href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="www.linkedin.com/in/mana-abolghasemi" target="_blank" rel="noopener noreferrer">LinkedIN</a>
       </p>
       <p>Brief description of research focus.</p>
     </div>
