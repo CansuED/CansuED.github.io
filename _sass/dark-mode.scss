@@ -949,3 +949,60 @@ footer,
     }
   }
 }
+
+// About Page Dark Mode Styles
+.updates-box {
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+}
+[data-theme="dark"] {
+  .about-content {
+    p {
+      color: #b8b8b8;
+      
+      a {
+        color: #64c9e6;
+        
+        &:hover {
+          color: #7dd3f0;
+          border-bottom-color: #7dd3f0;
+        }
+      }
+      
+      strong {
+        color: #e8e8e8;
+      }
+    }
+  }
+  
+  .updates-box {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-left: 4px solid #64c9e6;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+    
+    h3 {
+      color: #e8e8e8;
+    }
+  }
+  
+  .update-item {
+    border-bottom-color: #2a2a2a;
+  }
+  
+  .update-date {
+    color: #64c9e6;
+  }
+  
+  .update-content {
+    color: #b8b8b8;
+    
+    a {
+      color: #64c9e6;
+      
+      &:hover {
+        color: #7dd3f0;
+        border-bottom-color: #7dd3f0;
+      }
+    }
+  }
+}
