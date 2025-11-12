@@ -97,16 +97,6 @@ classes: wide
     </div>
 
     <div class="publication-item">
-      <div class="pub-authors">Sabie, D., Ekmekcioglu, C., Ahmed, I.</div>
-      <div class="pub-title">A Decade of International Migration Research in HCI: Overview, Challenges, Ethics, Impact, and Future Directions</div>
-      <div class="pub-venue">ACM ToCHI</div>
-      <div class="pub-meta">
-        <span class="pub-year">2022</span>
-        <a href="https://doi.org/10.1145/3490555" target="_blank" class="pub-link">View Paper</a>
-      </div>
-    </div>
-
-    <div class="publication-item">
       <div class="pub-authors">Caidi, N., Ekmekcioglu, C., Jamali, R., Chandra, P.</div>
       <div class="pub-title">Socially-Distant Fasting: Information Practices of Young Muslims During Pandemic</div>
       <div class="pub-venue">ISIC: Information Behaviour Conference</div>
