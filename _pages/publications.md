@@ -34,6 +34,16 @@ classes: wide
     </div>
 
     <div class="publication-item">
+      <div class="pub-authors">Sabie, D., Ekmekcioglu, C., Ahmed, I.</div>
+      <div class="pub-title">A Decade of International Migration Research in HCI: Overview, Challenges, Ethics, Impact, and Future Directions</div>
+      <div class="pub-venue">ACM Transactions on Computer-Human Interaction</div>
+      <div class="pub-meta">
+        <span class="pub-year">2022</span>
+        <a href="https://doi.org/10.1145/3490555" target="_blank" class="pub-link">View Paper</a>
+      </div>
+    </div>
+
+    <div class="publication-item">
       <div class="pub-authors">Dedeoglu, C., Ekmekcioglu, C.</div>
       <div class="pub-title">Information infrastructures and the future of ecological citizenship in the Anthropocene</div>
       <div class="pub-venue">Social Sciences</div>
