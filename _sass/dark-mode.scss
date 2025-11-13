@@ -968,8 +968,9 @@ footer,
 
 // About Page Dark Mode Styles
 .updates-box {
-    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+  transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
 }
+
 [data-theme="dark"] {
   .about-content {
     p {
@@ -993,8 +994,7 @@ footer,
   .updates-box {
     background: #1a1a1a;
     border: 1px solid #2a2a2a;
-    border-left: 4px solid #64c9e6;
-    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+    border-left: 3px solid #64c9e6;
     
     h3 {
       color: #e8e8e8;
@@ -1010,6 +1010,34 @@ footer,
   }
   
   .update-content {
+    color: #b8b8b8;
+    
+    a {
+      color: #64c9e6;
+      
+      &:hover {
+        color: #7dd3f0;
+        border-bottom-color: #7dd3f0;
+      }
+    }
+  }
+}
+
+// Contact Page Dark Mode Styles
+.contact-section {
+  transition: border-color 0.45s ease;
+}
+
+[data-theme="dark"] {
+  .contact-section {
+    border-bottom-color: #2a2a2a;
+  }
+  
+  .contact-label {
+    color: #e8e8e8;
+  }
+  
+  .contact-value {
     color: #b8b8b8;
     
     a {
