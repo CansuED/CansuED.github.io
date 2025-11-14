@@ -38,7 +38,7 @@ redirect_from:
         <div class="update-item">
           <div class="update-date">November 2025</div>
           <div class="update-content">
-            Organized workshop at <a href="#">ASIS&T 2025</a> "Best Practices for Ethics of Care When Engaging Vulnerable Communities" 
+            Organized workshop at <a href="#">ASIS&T 2025</a> titled <a href="[https://www.asist.org/](https://www.asist.org/meetings-events/am/am25/vulnerable-workshop/#:~:text=Techniques%20include%20small%2Dgroup%20work,peer%20exchange%2C%20and%20critical%20inquiry.)" target="_blank">Best Practices for Ethics of Care When Engaging Vulnerable Communities</a> 
           </div>
         </div>
 
