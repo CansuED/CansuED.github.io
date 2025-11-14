@@ -27,6 +27,13 @@ redirect_from:
     <div class="about-sidebar">
       <div class="updates-box">
         <h3>What's New</h3>
+
+       <div class="update-item">
+          <div class="update-date">December 2025</div>
+          <div class="update-content">
+            <Attending ICIS in Nashville>
+          </div>
+        </div>
         
         <div class="update-item">
           <div class="update-date">February 2025</div>
@@ -45,7 +52,7 @@ redirect_from:
         <div class="update-item">
           <div class="update-date">December 2024</div>
           <div class="update-content">
-            Appointed Canada Chapter Lead for <a href="https://www.asist.org/" target="_blank">ASIST</a> (2025-2026)
+            Appointed Canada Chapter Lead for <a href="https://www.asist.org/" target="_blank">ASIS&T</a> (2025-2026)
           </div>
         </div>
 
