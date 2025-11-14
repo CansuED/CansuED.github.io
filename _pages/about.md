@@ -36,14 +36,14 @@ redirect_from:
         </div>
         
         <div class="update-item">
-          <div class="update-date">February 2025</div>
+          <div class="update-date">November 2025</div>
           <div class="update-content">
-            <>
+            Organized workshop at <a href="#">ASIS&T 2025</a> "Best Practices for Ethics of Care When Engaging Vulnerable Communities" 
           </div>
         </div>
 
         <div class="update-item">
-          <div class="update-date">January 2025</div>
+          <div class="update-date">June 2025</div>
           <div class="update-content">
             Awarded <a href="#">SSHRC Insight Development Grant</a> for AI in public services research
           </div>
