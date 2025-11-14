@@ -28,10 +28,10 @@ redirect_from:
       <div class="updates-box">
         <h3>What's New</h3>
 
-       <div class="update-item">
+        <div class="update-item">
           <div class="update-date">December 2025</div>
           <div class="update-content">
-            <Attending ICIS in Nashville>
+            Attending <a href="#">ICIS conference</a> in Nashville!
           </div>
         </div>
         
