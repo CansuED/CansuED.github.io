@@ -9,7 +9,7 @@ classes: wide
 <div class="team-container">
 
 <div class="team-intro">
-  <p>Welcome to our research team! We are a diverse group of scholars dedicated to advancing knowledge in information systems, human-computer interaction, and data science.</p>
+  <p>Welcome to our research team! We are a diverse group of scholars dedicated to advancing knowledge in information systems, human-computer interaction, and data studies.</p>
   <p class="team-links">
     Jump to -
     <a href="#director">Director</a> · 
@@ -36,7 +36,7 @@ classes: wide
       <a href="https://ekmekcioglu.website/" target="_blank" rel="noopener noreferrer">Website</a> · 
       <a href="https://scholar.google.ca/citations?user=piapLkEAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
     </p>
-    <p>Dr. Ekmekcioglu leads research at the intersection of information systems, human-computer interaction, and organizational behavior.</p>
+    <p>Dr. Ekmekcioglu leads research at the intersection of information technologies and sustainability.</p>
   </div>
 </div>
 
@@ -55,7 +55,7 @@ classes: wide
         <a href="#" target="_blank" rel="noopener noreferrer">Website</a> · 
         <a href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
       </p>
-      <p>Brief description of research focus.</p>
+      <p>Research Assistant.</p>
     </div>
   </div>
 
@@ -71,7 +71,7 @@ classes: wide
         <a href="#" target="_blank" rel="noopener noreferrer">Website</a> · 
         <a href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
       </p>
-      <p>Brief description of research focus.</p>
+      <p>Research Assistant.</p>
     </div>
   </div>
 
