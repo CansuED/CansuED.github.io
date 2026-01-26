@@ -17,10 +17,11 @@ classes: wide
   <div class="research-section">
     <p class="section-intro">In alignment with the 2030 United Nations Sustainable Development Goals, which recognize migration as a powerful driver of sustainable development for migrants, their communities, and the host countries, my research agenda has involved close collaboration with migrant communities, non-profit and humanitarian service organizations, refugee entrepreneurs, startups, and policymakers.</p>
     
-    <div class="research-project">
-      <h3>GenAI in the Non-profit Immigrant-serving Agencies</h3>
-      <p>My SSHRC-funded research explores the current state of GenAI in the refugee and immigrant serving agencies in Canada.</p>
-    </div>
+  <div class="research-project">
+    <h3>GenAI in the Non-profit Immigrant-serving Agencies</h3>
+    <p>My SSHRC-funded research explores the current state of GenAI in the refugee and immigrant serving agencies in Canada.</p>
+    <a href="/genai-research/" class="project-button">Learn More →</a>
+  </div>
 
     <div class="research-project">
       <h3>Platform-based Employment, Senior Immigrants and Mobility</h3>

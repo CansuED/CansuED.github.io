@@ -61,6 +61,15 @@ body,
 .masthead,
 .masthead__inner-wrap,
 .page__inner-wrap,
+.about-content,
+.about-sidebar,
+.updates-box,
+.update-item,
+.publications-intro,
+.teaching-intro,
+.teaching-container, 
+.service-container,  
+.service-intro,
 .layout,
 .initial-content,
 .layout--single,
@@ -69,7 +78,8 @@ body,
 .masthead__menu, 
 .masthead__menu-item, 
 .visible-links, 
-.greedy-nav {
+.greedy-nav,
+.research-intro {
   background-color: var(--bg-color) !important;
   transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
 }
@@ -97,6 +107,10 @@ body,
   background-color: #1a1a1a !important;
   transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
 }
+
+/* 
+NAVIGATION
+*/
 
 .masthead {
   background: var(--masthead-bg) !important;
@@ -207,6 +221,10 @@ body[data-theme="dark"] .nav-toggle-label {
   background-color: #2d2d2d !important;
   color: #5bc0de !important;
 }
+
+/*
+HOMEPAGE STUFF
+*/
 
 .homepage-content h1 {
   color: #2c3e50 !important;
@@ -645,6 +663,7 @@ footer,
 [data-theme="dark"] {
   .teaching-intro {
     border-bottom-color: #2a2a2a;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
     
     p {
       color: #b8b8b8;
@@ -652,18 +671,20 @@ footer,
   }
   
   .teaching-container h2 {
-    color: #f0f0f0;
+    color: #f0f0f0 !important;
     font-weight: 600;
     border-top-color: #2a2a2a;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
   }
-  
-  .institution-subtitle {
-    color: #64c9e6;
+
+  .page__content .institution-subtitle {
+    color: #0ea5e9 !important;
   }
   
   .course-item {
     background: #242424;
     border-left-color: #333;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
     
     &:hover {
       background: rgba(82, 173, 200, 0.08);
@@ -671,20 +692,17 @@ footer,
     }
     
     h3 {
-      color: #e8e8e8;
+      color: #e8e8e8 !important;
       font-weight: 500;
     }
     
-  .course-level {
-      color: #64c9e6;
-      background: rgba(82, 173, 200, 0.12);
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      font-weight: 500;
-  }
+    .course-level {
+      color: #0ea5e9 !important;
+      background: rgba(82, 173, 200, 0.12) !important;
+    }
     
     .course-dept {
-      color: #8a8a8a;
+      color: #8a8a8a !important;
     }
   }
 }
@@ -753,6 +771,7 @@ footer,
     .research-section {
       background: #242424;
       border-left-color: #333;
+      transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;  
       
       &:hover {
         background: rgba(82, 173, 200, 0.08);
@@ -771,6 +790,8 @@ footer,
     .collaboration-section {
       background: #242424;
       border-left-color: #333;
+      transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+
       
       &:hover {
         background: rgba(82, 173, 200, 0.08);
@@ -814,6 +835,7 @@ footer,
 [data-theme="dark"] {
   .service-intro {
     border-bottom-color: #2a2a2a;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
     
     p {
       color: #b8b8b8;
@@ -824,11 +846,14 @@ footer,
     color: #f0f0f0;
     font-weight: 600;
     border-top-color: #2a2a2a;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+
   }
   
   .service-item {
     background: #242424;
     border-left-color: #333;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
     
     &:hover {
       background: rgba(82, 173, 200, 0.08);
@@ -858,6 +883,7 @@ footer,
 [data-theme="dark"] {
   .publications-intro {
     border-bottom-color: #2a2a2a;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
     
     p {
       color: #b8b8b8;
@@ -877,11 +903,13 @@ footer,
     color: #f0f0f0;
     font-weight: 600;
     border-top-color: #2a2a2a;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
   }
   
   .publication-item {
     background: #242424;
     border-left-color: #333;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease; 
     
     &:hover {
       background: rgba(82, 173, 200, 0.08);
@@ -916,10 +944,11 @@ footer,
   }
 }
 
-// Research Page Dark Mode Styles - Enhanced
+// Research Page Dark Mode Styles
 [data-theme="dark"] {
   .research-intro {
     border-bottom-color: #2a2a2a;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
     
     p {
       color: #b8b8b8;
@@ -930,9 +959,11 @@ footer,
     color: #f0f0f0;
     font-weight: 600;
     border-top-color: #2a2a2a;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
   }
   
   .research-section {
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
     .section-intro {
       color: #b8b8b8;
     }
@@ -941,6 +972,7 @@ footer,
   .research-project {
     background: #242424;
     border-left-color: #333;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
     
     &:hover {
       background: rgba(82, 173, 200, 0.08);
@@ -963,6 +995,16 @@ footer,
         }
       }
     }
+    
+    .project-button {
+      background: #0c2f38;
+      color: white !important;
+      
+      &:hover {
+        background: #0c2f38;
+        color: white !important;
+      }
+    }
   }
 }
 
@@ -973,6 +1015,8 @@ footer,
 
 [data-theme="dark"] {
   .about-content {
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+
     p {
       color: #b8b8b8;
       
@@ -995,6 +1039,8 @@ footer,
     background: #1a1a1a;
     border: 1px solid #2a2a2a;
     border-left: 3px solid #64c9e6;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+
     
     h3 {
       color: #e8e8e8;
@@ -1003,14 +1049,18 @@ footer,
   
   .update-item {
     border-bottom-color: #2a2a2a;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+
   }
   
   .update-date {
     color: #64c9e6;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
   }
   
   .update-content {
     color: #b8b8b8;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
     
     a {
       color: #64c9e6;
@@ -1025,12 +1075,13 @@ footer,
 
 // Contact Page Dark Mode Styles
 .contact-section {
-  transition: border-color 0.45s ease;
+  transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
 }
 
 [data-theme="dark"] {
   .contact-section {
     border-bottom-color: #2a2a2a;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
   }
   
   .contact-label {

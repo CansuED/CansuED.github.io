@@ -134,6 +134,7 @@ classes: wide
 
 </div>
 
+<!--
 <h2 id="collaborators">Collaborators</h2>
 
 <div class="collaborator-grid">
@@ -173,7 +174,7 @@ classes: wide
     <li><strong>Name</strong> (Year) — Current Position, Institution</li>
   </ul>
 </div>
-
+-->
 <div class="team-join">
   <p>Interested in joining our team? <a href="/contact/">Get in touch</a> to learn about current opportunities.</p>
 </div>

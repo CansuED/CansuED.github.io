@@ -13,7 +13,7 @@
   p {
     font-size: 1rem;
     line-height: 1.7;
-    color: #666;
+    color: #374151;
     margin-bottom: 1rem;
     
     &:last-child {
@@ -44,7 +44,7 @@
   .section-intro {
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #666;
+    color: #374151;
     margin-bottom: 2rem;
   }
 }
@@ -56,6 +56,7 @@
   border-left: 3px solid #e8e8e8;
   border-radius: 4px;
   transition: all 0.3s ease;
+  position: relative;
   
   &:hover {
     background: rgba(82, 173, 200, 0.04);
@@ -69,24 +70,48 @@
     color: #2c3e50;
     margin: 0 0 0.8rem 0;
     line-height: 1.4;
+    display: inline-block;
+    max-width: calc(100% - 110px);
+  }
+  
+  .project-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    background: #3d91ab;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    
+    &:hover {
+      background: #2e7a8f;
+      color: white;
+      transform: translateY(-1px);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
   }
   
   p {
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #666;
+    color: #374151;
     margin: 0;
     
     a {
-      color: #52adc8;
+      color: #0ea5e9;
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: all 0.2s ease;
-      
-      &:hover {
-        color: #3d8fa3;
-        border-bottom-color: #3d8fa3;
-      }
     }
   }
 }
@@ -101,6 +126,15 @@
     
     h3 {
       font-size: 1rem;
+      max-width: 100%;
+      display: block;
+      margin-bottom: 1rem;
+    }
+    
+    .project-button {
+      position: static;
+      display: inline-block;
+      margin-top: 1rem;
     }
     
     p {

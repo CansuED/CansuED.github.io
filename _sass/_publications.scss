@@ -12,7 +12,7 @@
   p {
     font-size: 1rem;
     line-height: 1.7;
-    color: #666;
+    color: #374151;
     margin-bottom: 1rem;
     
     &:last-child {
@@ -20,14 +20,14 @@
     }
     
     a {
-      color: #52adc8;
+      color: #0ea5e9;
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: all 0.2s ease;
       
       &:hover {
-        color: #3d8fa3;
-        border-bottom-color: #3d8fa3;
+        color: #0ea5e9;
+        border-bottom-color: #0ea5e9;
       }
     }
   }
@@ -89,7 +89,7 @@
   
   .pub-venue {
     font-size: 0.88rem;
-    color: #52adc8;
+    color: #0ea5e9;
     font-style: normal;
     margin-bottom: 0.7rem;
     line-height: 1.5;
@@ -111,14 +111,14 @@
   
   .pub-link {
     font-size: 0.85rem;
-    color: #52adc8;
+    color: #0ea5e9;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: all 0.2s ease;
     
     &:hover {
-      color: #3d8fa3;
-      border-bottom-color: #3d8fa3;
+      color: #0ea5e9;
+      border-bottom-color: #0ea5e9;
     }
   }
 }
