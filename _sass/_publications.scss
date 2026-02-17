@@ -144,3 +144,68 @@
     }
   }
 }
+
+// Publications Page Dark Mode Styles - Enhanced
+[data-theme="dark"] {
+  .publications-intro {
+    border-bottom-color: #2a2a2a;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+    
+    p {
+      color: #b8b8b8;
+      
+      a {
+        color: #64c9e6;
+        
+        &:hover {
+          color: #7dd3f0;
+          border-bottom-color: #7dd3f0;
+        }
+      }
+    }
+  }
+  
+  .publications-container h2 {
+    color: #f0f0f0;
+    font-weight: 600;
+    border-top-color: #2a2a2a;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+  }
+  
+  .publication-item {
+    background: #242424;
+    border-left-color: #333;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease; 
+    
+    &:hover {
+      background: rgba(82, 173, 200, 0.08);
+      border-left-color: #64c9e6;
+    }
+    
+    .pub-authors {
+      color: #999;
+    }
+    
+    .pub-title {
+      color: #e8e8e8;
+      font-weight: 500;
+    }
+    
+    .pub-venue {
+      color: #64c9e6;
+    }
+    
+    .pub-year {
+      color: #8a8a8a;
+    }
+    
+    .pub-link {
+      color: #64c9e6;
+      
+      &:hover {
+        color: #7dd3f0;
+        border-bottom-color: #7dd3f0;
+      }
+    }
+  }
+}

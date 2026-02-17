@@ -61,3 +61,32 @@
     font-size: 0.95rem;
   }
 }
+
+// Contact Page Dark Mode Styles
+.contact-section {
+  transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+}
+
+[data-theme="dark"] {
+  .contact-section {
+    border-bottom-color: #2a2a2a;
+    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+  }
+  
+  .contact-label {
+    color: #e8e8e8;
+  }
+  
+  .contact-value {
+    color: #b8b8b8;
+    
+    a {
+      color: #64c9e6;
+      
+      &:hover {
+        color: #7dd3f0;
+        border-bottom-color: #7dd3f0;
+      }
+    }
+  }
+}

@@ -6,6 +6,8 @@ author_profile: false
 classes: wide
 ---
 
+<div class="particles" id="particles"></div>
+
 <div class="homepage-content">
   <img src="/images/Cansu.jpeg" alt="Cansu Ekmekcioglu" class="profile-image">
 
@@ -34,3 +36,41 @@ classes: wide
     </a>
   </div>
 </div>
+
+<script>
+(function() {
+  function createParticles() {
+    const particlesContainer = document.getElementById('particles');
+    if (!particlesContainer) {
+      setTimeout(createParticles, 100);
+      return;
+    }
+    
+    particlesContainer.innerHTML = '';
+    const particleCount = 20;
+    
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      const size = Math.random() * 6 + 3;
+      const startX = Math.random() * 100;
+      const startY = Math.random() * 100;
+      const delay = Math.random() * 20;
+      particle.style.width = size + 'px';
+      particle.style.height = size + 'px';
+      particle.style.left = startX + '%';
+      particle.style.top = startY + '%';
+      particle.style.animationDelay = delay + 's';
+      particlesContainer.appendChild(particle);
+    }
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', createParticles);
+  } else {
+    createParticles();
+  }
+  
+  setTimeout(createParticles, 500);
+})();
+</script>

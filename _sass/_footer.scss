@@ -90,3 +90,32 @@
     }
   }
 }
+
+// ============================================
+// FOOTER
+// ============================================
+
+.page__footer,
+footer,
+.site-footer {
+  transition: color 0.45s ease;
+}
+
+[data-theme="dark"] .page__footer,
+[data-theme="dark"] footer,
+[data-theme="dark"] .site-footer {
+  background-color: #1a1a1a !important;
+  color: #d0d0d0 !important;
+}
+
+[data-theme="dark"] .page__footer a,
+[data-theme="dark"] footer a,
+[data-theme="dark"] .site-footer a {
+  color: #5bc0de !important;
+}
+
+[data-theme="dark"] .page__footer a:hover,
+[data-theme="dark"] footer a:hover,
+[data-theme="dark"] .site-footer a:hover {
+  color: #7dd3f0 !important;
+}
