@@ -44,8 +44,8 @@
 .service-item {
   padding: 1.5rem 1.2rem;
   margin-bottom: 1.2rem;
-  background: #fafafa;
-  border-left: 3px solid #e8e8e8;
+  background: #f4f5f5;
+  border-left: 3px solid #dad9d9;
   border-radius: 4px;
   transition: all 0.3s ease;
   
@@ -54,7 +54,7 @@
   }
   
   &:hover {
-    background: rgba(82, 173, 200, 0.04);
+    background: #f4f5f5;
     border-left-color: #52adc8;
     transform: translateX(4px);
   }
