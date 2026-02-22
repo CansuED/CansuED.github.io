@@ -28,7 +28,7 @@
   --border-color: #333333;
   --border-light: #2a2a2a;
   --border-lighter: #252525;
-  --masthead-bg: #1a1a1a;
+  --masthead-bg: transparent;
   --profile-shadow: rgba(0, 0, 0, 0.6);
   --social-bg: #2d2d2d;
   --social-text: #b0b0b0;
@@ -38,7 +38,10 @@
   --card-hover-shadow: rgba(91, 192, 222, 0.15);
 }
 
-// Single coordinated transition on root elements only
+// ============================================
+// BASE TRANSITIONS
+// ============================================
+
 html {
   background-color: var(--bg-color);
 }
@@ -49,40 +52,48 @@ body {
   transition: color 0.45s ease;
 }
 
-// All major containers use the same timing
+// Page/layout containers — get the flat dark bg in dark mode.
+// INTENTIONALLY EXCLUDED (have their own dark rules below):
+//   .publications-intro, .publication-item
+//   .service-container, .service-intro, .service-item
+//   .homepage-content (uses CSS vars directly, needs no override)
 html,
 body,
 #main,
 .page,
 .page__inner-wrap,
-.page__content, 
-.team-container, 
+.page__content,
+.team-container,
 .student-card,
-.masthead,
-.masthead__inner-wrap,
-.page__inner-wrap,
 .about-content,
 .about-sidebar,
 .updates-box,
 .update-item,
-.publications-intro,
 .teaching-intro,
-.teaching-container, 
-.service-container,  
-.service-intro,
+.teaching-container,
 .layout,
 .initial-content,
 .layout--single,
 .layout--archive,
-.layout--home, 
-.masthead__menu, 
-.masthead__menu-item, 
-.visible-links, 
-.greedy-nav,
+.layout--home,
 .research-intro {
   background-color: var(--bg-color) !important;
   transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
 }
+
+// Masthead gets its OWN transition — no background-color set here
+.masthead,
+.masthead__inner-wrap,
+.masthead__menu,
+.masthead__menu-item,
+.visible-links,
+.greedy-nav {
+  transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+}
+
+// ============================================
+// DARK MODE — page/layout containers
+// ============================================
 
 [data-theme="dark"] html,
 [data-theme="dark"] body,
@@ -90,26 +101,175 @@ body,
 [data-theme="dark"] .page,
 [data-theme="dark"] .page__inner-wrap,
 [data-theme="dark"] .page__content,
-[data-theme="dark"] .team-container, 
-[data-theme="dark"] .student-card,  
-[data-theme="dark"] .masthead,
-[data-theme="dark"] .masthead__inner-wrap,
-[data-theme="dark"] .page__inner-wrap,
+[data-theme="dark"] .team-container,
+[data-theme="dark"] .student-card,
 [data-theme="dark"] .layout,
 [data-theme="dark"] .initial-content,
-[data-theme="dark"] .layout--single, 
+[data-theme="dark"] .layout--single,
 [data-theme="dark"] .layout--archive,
-[data-theme="dark"] .layout--home, 
-[data-theme="dark"] .masthead__menu, 
-[data-theme="dark"] .masthead__menu-item, 
-[data-theme="dark"] .visible-links, 
-[data-theme="dark"] .greedy-nav  {
+[data-theme="dark"] .layout--home {
   background-color: #1a1a1a !important;
   transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
 }
 
 // ============================================
-// ARCHIVE PAGES
+// DARK MODE — Masthead glass effect
+// ============================================
+
+[data-theme="dark"] .masthead {
+  background: rgba(15, 17, 26, 0.92) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05),
+    0 4px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .masthead__inner-wrap,
+[data-theme="dark"] .masthead__menu,
+[data-theme="dark"] .masthead__menu-item,
+[data-theme="dark"] .visible-links,
+[data-theme="dark"] .greedy-nav {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+// ============================================
+// DARK MODE — Homepage
+// homepage.scss uses CSS vars so most things
+// adapt automatically. We only need to handle
+// page__content which is a generic container.
+// ============================================
+
+// particle colour handled in homepage.scss via [data-theme="dark"] .particle
+
+[data-theme="dark"] .page__content {
+  color: #e8e8e8 !important;
+  background-color: #1a1a1a !important;
+}
+
+// IMPORTANT: Do NOT add color overrides for .page__content h1/p/div etc.
+// Those blanket rules were killing the gradient text and homepage animations.
+// Individual pages style their own text via their own scss files.
+
+[data-theme="dark"] .page__content a {
+  color: #5bc0de !important;
+
+  &:hover {
+    color: #7dd3f0 !important;
+  }
+}
+
+// ============================================
+// DARK MODE — Publications
+// ============================================
+
+[data-theme="dark"] .publications-intro {
+  border-bottom-color: #2a2a2a !important;
+  background-color: transparent !important;
+
+  p {
+    color: #b8b8b8 !important;
+
+    a {
+      color: #64c9e6 !important;
+
+      &:hover {
+        color: #7dd3f0 !important;
+        border-bottom-color: #7dd3f0 !important;
+      }
+    }
+  }
+}
+
+[data-theme="dark"] .publications-container h2 {
+  color: #f0f0f0 !important;
+  border-top-color: #2a2a2a !important;
+}
+
+[data-theme="dark"] .publication-item {
+  background: #242424 !important;
+  background-color: #242424 !important;
+  border-left-color: #333 !important;
+
+  &:hover {
+    background: rgba(82, 173, 200, 0.08) !important;
+    background-color: rgba(82, 173, 200, 0.08) !important;
+    border-left-color: #64c9e6 !important;
+  }
+
+  .pub-authors {
+    color: #999 !important;
+  }
+
+  .pub-title {
+    color: #e8e8e8 !important;
+  }
+
+  .pub-venue {
+    color: #64c9e6 !important;
+  }
+
+  .pub-year {
+    color: #8a8a8a !important;
+  }
+
+  .pub-link {
+    color: #64c9e6 !important;
+
+    &:hover {
+      color: #7dd3f0 !important;
+      border-bottom-color: #7dd3f0 !important;
+    }
+  }
+}
+
+// ============================================
+// DARK MODE — Services
+// ============================================
+
+[data-theme="dark"] .service-intro {
+  border-bottom-color: #2a2a2a !important;
+  background-color: transparent !important;
+
+  p {
+    color: #b8b8b8 !important;
+  }
+}
+
+[data-theme="dark"] .service-container h2 {
+  color: #f0f0f0 !important;
+  border-top-color: #2a2a2a !important;
+}
+
+[data-theme="dark"] .service-item {
+  background: #242424 !important;
+  background-color: #242424 !important;
+  border-left-color: #333 !important;
+
+  &:hover {
+    background: rgba(82, 173, 200, 0.08) !important;
+    background-color: rgba(82, 173, 200, 0.08) !important;
+    border-left-color: #64c9e6 !important;
+  }
+
+  h3 {
+    color: #e8e8e8 !important;
+  }
+
+  .service-role {
+    color: #64c9e6 !important;
+    background: rgba(91, 192, 222, 0.1) !important;
+  }
+
+  .service-year {
+    color: #8a8a8a !important;
+  }
+}
+
+// ============================================
+// DARK MODE — Archive pages
 // ============================================
 
 .archive,
@@ -158,15 +318,18 @@ body,
   }
 
   [data-theme="dark"] .visible-links {
-    background: #1a1a1a !important;
-    background-color: #1a1a1a !important;
-    border: 1px solid #333333 !important;
+    background: rgba(18, 21, 32, 0.98) !important;
+    background-color: rgba(18, 21, 32, 0.98) !important;
+    border: 1px solid rgba(255, 255, 255, 0.09) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
   }
 
   [data-theme="dark"] .masthead__menu-item,
   [data-theme="dark"] .masthead__menu-item--active,
   [data-theme="dark"] .masthead__menu-item.current,
   [data-theme="dark"] li.masthead__menu-item {
-    border-bottom: 1px solid #2a2a2a !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
   }
 }
