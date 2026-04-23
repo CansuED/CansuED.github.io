@@ -28,15 +28,16 @@ permalink: /lab/
 </div>
 
 <script>
-(function(){
+document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
   var seed = 1234;
   function rng(){ seed=(seed*9301+49297)%233280; return seed/233280; }
 
   var canvas = document.getElementById('spiral-canvas');
-  var ctx    = canvas.getContext('2d');
-  var dpr    = window.devicePixelRatio || 1;
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
   var W = 0, H = 0;
 
   function resize(){
@@ -51,8 +52,8 @@ permalink: /lab/
   resize();
   window.addEventListener('resize', resize);
 
-  var CAM_Z  = -400, CAM_T = 3400, ZOOM = 100, YOF = 28;
-  var CHG    = 0.32, MS = 15000, NS = 4000;
+  var CAM_Z = -400, CAM_T = 3400, ZOOM = 100, YOF = 28;
+  var CHG   = 0.32, MS = 15000, NS = 4000;
 
   function clamp(v,a,b){return Math.min(Math.max(v,a),b);}
   function mapv(v,a,b,c,d){return c+(d-c)*((v-a)/(b-a));}
@@ -68,13 +69,9 @@ permalink: /lab/
     return{x:r*Math.cos(th), y:r*Math.sin(th)+YOF};
   }
   function dark(){return document.documentElement.getAttribute('data-theme')==='dark';}
-
-  // Read the actual theme background color from the CSS variable so the
-  // canvas always matches the page — same token the research page uses.
   function themeBg(){
     if(!dark()) return '#ffffff';
-    var val = getComputedStyle(document.documentElement)
-                .getPropertyValue('--bg-color').trim();
+    var val = getComputedStyle(document.documentElement).getPropertyValue('--bg-color').trim();
     return val || '#09090e';
   }
 
@@ -135,28 +132,22 @@ permalink: /lab/
     var t  = ((now-t0)%MS)/MS;
     var t1 = clamp(mapv(t,0,CHG+.25,0,1),0,1);
     var t2 = clamp(mapv(t,CHG,1,0,1),0,1);
-    var dk = dark();
     var bg  = themeBg();
-    var dot = dk ? 'rgba(100,201,230,0.45)' : 'rgba(28,46,64,0.35)';
-
+    var dot = dark() ? 'rgba(100,201,230,0.45)' : 'rgba(28,46,64,0.35)';
     ctx.fillStyle=bg; ctx.fillRect(0,0,W,H);
-
     ctx.save();
     ctx.translate(W/2, H/2);
     ctx.rotate(-Math.PI*eg(t2,2.7));
-
     for(var j=0;j<stars.length;j++) drawStar(stars[j],t1,t,dot);
-
     ctx.restore();
   }
   requestAnimationFrame(frame);
-  setTimeout(function(){ canvas.classList.add('loaded'); },150);
-}());
+  setTimeout(function(){ canvas.classList.add('loaded'); }, 150);
+});
 </script>
 
 <script>
 (function () {
-  'use strict';
   if (window.__themeTransitionLab) return;
   window.__themeTransitionLab = true;
 

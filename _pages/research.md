@@ -120,9 +120,8 @@ classes: wide
 
 <script>
 (function () {
-  'use strict';
-  if (window.__themeTransitionResearch) return;
-  window.__themeTransitionResearch = true;
+  if (window.__themeTransition) return;
+  window.__themeTransition = true;
 
   function isThemeToggle(el) {
     if (!el) return false;

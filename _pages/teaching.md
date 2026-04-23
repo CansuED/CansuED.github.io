@@ -207,14 +207,10 @@ classes: wide
 
 </div>
 
-<!-- ============================================================
-     PREMIUM THEME TRANSITION (mirrors research page exactly)
-     ============================================================ -->
 <script>
 (function () {
-  'use strict';
-  if (window.__themeTransitionTeaching) return;
-  window.__themeTransitionTeaching = true;
+  if (window.__themeTransition) return;
+  window.__themeTransition = true;
 
   function isThemeToggle(el) {
     if (!el) return false;

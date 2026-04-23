@@ -43,29 +43,8 @@ classes: wide
 
 <script>
 (function () {
-  // ── Filter logic ──
-  var filterBtns = document.querySelectorAll('.pubs-filter');
-  var sections   = document.querySelectorAll('.pubs-section');
-
-  filterBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      filterBtns.forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      var f = btn.getAttribute('data-f');
-
-      sections.forEach(function (s) {
-        if (f === 'all') {
-          s.style.display = '';
-        } else {
-          s.style.display = (s.id === 'ps-' + f) ? '' : 'none';
-        }
-      });
-    });
-  });
-
-  // ── Theme transition (matches other pages) ──
-  if (window.__themeTransitionPubs) return;
-  window.__themeTransitionPubs = true;
+  if (window.__themeTransition) return;
+  window.__themeTransition = true;
 
   function isThemeToggle(el) {
     if (!el) return false;

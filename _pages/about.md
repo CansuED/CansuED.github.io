@@ -109,34 +109,18 @@ redirect_from:
 
 </div>
 
-<!-- ============================================================
-     PREMIUM THEME TRANSITION
-     ─────────────────────────────────────────────────────────────
-     Mirrors the homepage transition exactly:
-     · View Transitions API  → radial circle sweep from toggle btn
-     · CSS class fallback    → smooth 0.85s crossfade (Firefox etc.)
-     · prefers-reduced-motion → instant swap, no animation
-     ============================================================ -->
 <script>
 (function () {
-  'use strict';
-
-  // Guard: only wire up once per page, even if the script runs twice
-  if (window.__themeTransitionAbout) return;
-  window.__themeTransitionAbout = true;
-
-  // ── Helpers ──────────────────────────────────────────────────
+  if (window.__themeTransition) return;
+  window.__themeTransition = true;
 
   function isThemeToggle(el) {
     if (!el) return false;
-    var sig = (el.className || '') +
-              (el.title     || '') +
-              (el.getAttribute('aria-label') || '') +
-              (el.innerHTML  || '');
+    var sig = (el.className || '') + (el.title || '') +
+              (el.getAttribute('aria-label') || '') + (el.innerHTML || '');
     return /dark|light|theme|color.?scheme|sun|moon|☀|🌙/i.test(sig);
   }
 
-  // ── CSS fallback ──────────────────────────────────────────────
   var fallbackTimer = null;
   function cssTransitionFallback() {
     clearTimeout(fallbackTimer);
@@ -146,29 +130,18 @@ redirect_from:
     }, 950);
   }
 
-  // ── View Transitions interception ─────────────────────────────
   var _replaying = false;
-
   document.addEventListener('click', function (e) {
     if (_replaying) return;
-
     var btn = e.target;
     while (btn && btn !== document.documentElement) {
-      if (
-        (btn.tagName === 'BUTTON' || btn.getAttribute('role') === 'button') &&
-        isThemeToggle(btn)
-      ) break;
+      if ((btn.tagName === 'BUTTON' || btn.getAttribute('role') === 'button') && isThemeToggle(btn)) break;
       btn = btn.parentElement;
     }
     if (!btn || btn === document.documentElement) return;
-
-    // Pin the reveal circle to the exact button centre
-    var r  = btn.getBoundingClientRect();
-    var cx = (r.left + r.width  / 2).toFixed(1) + 'px';
-    var cy = (r.top  + r.height / 2).toFixed(1) + 'px';
-    document.documentElement.style.setProperty('--vt-x', cx);
-    document.documentElement.style.setProperty('--vt-y', cy);
-
+    var r = btn.getBoundingClientRect();
+    document.documentElement.style.setProperty('--vt-x', (r.left + r.width / 2).toFixed(1) + 'px');
+    document.documentElement.style.setProperty('--vt-y', (r.top + r.height / 2).toFixed(1) + 'px');
     if (typeof document.startViewTransition === 'function') {
       e.stopImmediatePropagation();
       document.startViewTransition(function () {
@@ -179,17 +152,11 @@ redirect_from:
     } else {
       cssTransitionFallback();
     }
+  }, true);
 
-  }, true /* capture phase */);
-
-  // ── Keyboard support ─────────────────────────────────────────
   document.addEventListener('keydown', function (e) {
     if (e.key !== ' ' && e.key !== 'Enter') return;
-    var btn = document.activeElement;
-    if (btn && isThemeToggle(btn)) {
-      cssTransitionFallback();
-    }
+    if (document.activeElement && isThemeToggle(document.activeElement)) cssTransitionFallback();
   });
-
 }());
 </script>
