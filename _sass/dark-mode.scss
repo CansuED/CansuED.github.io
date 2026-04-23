@@ -113,17 +113,18 @@ body,
 }
 
 // ============================================
-// DARK MODE — Masthead glass effect
+// DARK MODE — Masthead
+// The pill navbar (_header-nav.scss) handles
+// its own dark styling via [data-theme="dark"].
+// This file must NOT set background/border on
+// .masthead in dark mode — that's what was
+// causing the ugly full-width dark bar/line.
 // ============================================
 
 [data-theme="dark"] .masthead {
-  background: rgba(15, 17, 26, 0.92) !important;
-  backdrop-filter: blur(16px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.05),
-    0 4px 24px rgba(0, 0, 0, 0.4) !important;
+  background: transparent !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
 [data-theme="dark"] .masthead__inner-wrap,

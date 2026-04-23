@@ -1,0 +1,540 @@
+// ============================================================
+//  STUDENTS PAGE — Premium Design
+//  Consistent with research & team pages: Outfit font, teal
+//  palette, stream layout, shared member-card system.
+//
+//  NOTE: Member card styles (.member-card, .member-photo-wrap,
+//  .member-photo-ring, .member-info, .member-role, .member-affil,
+//  .member-bio, .member-links, .mem-link, .members-grid) are
+//  defined in _team-redesign.scss and shared here — do NOT
+//  duplicate them in this file.
+// ============================================================
+
+// ── Page container ────────────────────────────────────────────
+.page__content:has(.students-container) {
+  max-width: 1200px !important;
+  width: 100% !important;
+  padding: 0 3rem !important;
+  background-color: var(--bg-color) !important;
+}
+
+.students-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+// ── Anchor scroll offset ──────────────────────────────────────
+.students-stream[id] {
+  scroll-margin-top: 100px;
+}
+
+// ── Hero ──────────────────────────────────────────────────────
+.students-hero {
+  margin-bottom: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+  transition: border-color 0.45s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 64px;
+    height: 3px;
+    background: linear-gradient(90deg, #52adc8, #3a9ab8);
+    border-radius: 9999px;
+  }
+}
+
+.students-eyebrow {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #52adc8;
+  margin: 0 0 0.75rem;
+  transition: color 0.45s ease;
+}
+
+.students-headline {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  margin: 0 0 1rem;
+  color: #1c2e40;
+  border: none !important;
+  padding: 0 !important;
+  transition: color 0.45s ease;
+
+  span {
+    background: linear-gradient(135deg, #3a9ab8 0%, #52adc8 60%, #7dd3f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.students-tagline {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 1.05rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.6;
+  max-width: 620px;
+  transition: color 0.45s ease;
+}
+
+// ── Stream (mirrors research page pattern) ────────────────────
+.students-stream {
+  margin-bottom: 4.5rem;
+
+  &:last-of-type {
+    margin-bottom: 2rem;
+  }
+}
+
+// NOTE: .stream-header, .stream-number, .stream-meta are defined
+// in _research.scss and shared across pages.
+
+// ── Research area cards ───────────────────────────────────────
+.research-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 1.75rem;
+}
+
+.area-card {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 20px;
+  padding: 1.75rem 1.5rem;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.45s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #52adc8, #3a9ab8);
+    border-radius: 20px 20px 0 0;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 4px 16px rgba(0, 0, 0, 0.06),
+      0 16px 40px rgba(82, 173, 200, 0.10);
+    border-color: rgba(82, 173, 200, 0.30);
+
+    &::before { opacity: 1; }
+
+    .area-icon {
+      background: rgba(82, 173, 200, 0.15);
+      border-color: rgba(82, 173, 200, 0.35);
+    }
+  }
+}
+
+.area-number {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(82, 173, 200, 0.5);
+  margin-bottom: 0.75rem;
+  transition: color 0.45s ease;
+}
+
+.area-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(82, 173, 200, 0.08);
+  border: 1px solid rgba(82, 173, 200, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: #3a9ab8;
+  flex-shrink: 0;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.45s ease;
+}
+
+.area-card h3 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1c2e40;
+  margin: 0 0 0.65rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  transition: color 0.45s ease;
+}
+
+.area-card p {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.72;
+  color: #6b7280;
+  margin: 0;
+  flex: 1;
+  transition: color 0.45s ease;
+}
+
+// ── Apply CTA block ───────────────────────────────────────────
+.apply-cta {
+  background: rgba(82, 173, 200, 0.04);
+  border: 1px solid rgba(82, 173, 200, 0.18);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  transition: background 0.45s ease, border-color 0.45s ease;
+
+  &:hover {
+    background: rgba(82, 173, 200, 0.07);
+    border-color: rgba(82, 173, 200, 0.3);
+  }
+}
+
+.apply-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.apply-cta-text {
+  flex: 1;
+  min-width: 200px;
+
+  .apply-cta-heading {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1c2e40;
+    margin: 0 0 0.25rem;
+    letter-spacing: -0.01em;
+    transition: color 0.45s ease;
+  }
+
+  .apply-cta-sub {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 0.87rem;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.6;
+    transition: color 0.45s ease;
+  }
+}
+
+// ── Apply CTA Button ──────────────────────────────────────────
+// Ghost/outline style — sits quietly within the CTA strip,
+// fills solid teal on hover. Same visual weight in both modes.
+.apply-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.1rem;
+  background: transparent;
+  border: 1.5px solid rgba(37, 137, 168, 0.5);
+  border-radius: 9999px;
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2589a8 !important;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+  box-shadow: none;
+  transition:
+    background 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease,
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+
+  svg {
+    flex-shrink: 0;
+    transition: transform 0.22s ease;
+  }
+
+  &:hover {
+    background: #2589a8;
+    border-color: #2589a8;
+    color: #ffffff !important;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 137, 168, 0.25);
+
+    svg { transform: translateX(3px); }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}
+
+// ── Bottom join strip ─────────────────────────────────────────
+.students-join {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.75rem 2rem;
+  background: rgba(82, 173, 200, 0.04);
+  border: 1px dashed rgba(82, 173, 200, 0.3);
+  border-radius: 16px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  transition: background 0.45s ease, border-color 0.45s ease;
+
+  &:hover {
+    background: rgba(82, 173, 200, 0.07);
+    border-color: rgba(82, 173, 200, 0.45);
+  }
+}
+
+.students-join-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(82, 173, 200, 0.1);
+  border: 1px solid rgba(82, 173, 200, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #3a9ab8;
+  transition: background 0.45s ease, border-color 0.45s ease, color 0.45s ease;
+}
+
+.students-join-text {
+
+  .students-join-heading {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #1c2e40;
+    margin: 0 0 0.2rem;
+    letter-spacing: -0.01em;
+    transition: color 0.45s ease;
+  }
+
+  .students-join-sub {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #6b7280;
+    margin: 0;
+    transition: color 0.45s ease;
+
+    a {
+      color: #3a9ab8;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(58, 154, 184, 0.3);
+      transition: color 0.2s ease, border-color 0.2s ease;
+
+      &:hover {
+        color: #1c7a96;
+        border-bottom-color: #1c7a96;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// ============================================================
+//  DARK MODE
+// ============================================================
+
+[data-theme="dark"] {
+
+  .students-hero { border-bottom-color: #2a2a2a; }
+  .students-eyebrow { color: #64c9e6; }
+
+  .students-headline {
+    color: #e2ecf3;
+
+    span {
+      background: linear-gradient(135deg, #52adc8 0%, #7dd3f0 60%, #a8e6f8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  .students-tagline { color: #8fa8b8; }
+
+  // Area cards
+  .area-card {
+    background: rgba(30, 30, 35, 0.6);
+    border-color: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      border-color: rgba(100, 201, 230, 0.28);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 16px 40px rgba(100, 201, 230, 0.08);
+
+      .area-icon {
+        background: rgba(100, 201, 230, 0.12);
+        border-color: rgba(100, 201, 230, 0.3);
+      }
+    }
+
+    h3 { color: #e2ecf3; }
+    p  { color: #8fa8b8; }
+  }
+
+  .area-number { color: rgba(100, 201, 230, 0.35); }
+
+  .area-icon {
+    background: rgba(100, 201, 230, 0.08);
+    border-color: rgba(100, 201, 230, 0.15);
+    color: #64c9e6;
+  }
+
+  // Apply CTA
+  .apply-cta {
+    background: rgba(100, 201, 230, 0.04);
+    border-color: rgba(100, 201, 230, 0.15);
+
+    &:hover {
+      background: rgba(100, 201, 230, 0.07);
+      border-color: rgba(100, 201, 230, 0.25);
+    }
+  }
+
+  .apply-cta-text {
+    .apply-cta-heading { color: #e2ecf3; }
+    .apply-cta-sub    { color: #8fa8b8; }
+  }
+
+  // Dark mode: same ghost style, teal adjusted for dark bg
+  .apply-cta-btn {
+    background: transparent;
+    border-color: rgba(100, 201, 230, 0.4);
+    color: #64c9e6 !important;
+    box-shadow: none;
+
+    &:hover {
+      background: rgba(100, 201, 230, 0.14);
+      border-color: rgba(100, 201, 230, 0.65);
+      color: #a8e6f8 !important;
+      box-shadow: 0 4px 12px rgba(100, 201, 230, 0.12);
+
+      svg { transform: translateX(3px); }
+    }
+
+    &:active {
+      background: rgba(100, 201, 230, 0.08);
+      box-shadow: none;
+    }
+  }
+
+  // Join strip
+  .students-join {
+    background: rgba(100, 201, 230, 0.04);
+    border-color: rgba(100, 201, 230, 0.18);
+
+    &:hover {
+      background: rgba(100, 201, 230, 0.07);
+      border-color: rgba(100, 201, 230, 0.3);
+    }
+  }
+
+  .students-join-icon {
+    background: rgba(100, 201, 230, 0.08);
+    border-color: rgba(100, 201, 230, 0.16);
+    color: #64c9e6;
+  }
+
+  .students-join-text {
+
+    .students-join-heading { color: #e2ecf3; }
+
+    .students-join-sub {
+      color: #8fa8b8;
+
+      a {
+        color: #64c9e6;
+        border-bottom-color: rgba(100, 201, 230, 0.25);
+
+        &:hover {
+          color: #7dd3f0;
+          border-bottom-color: #7dd3f0;
+        }
+      }
+    }
+  }
+}
+
+// ============================================================
+//  RESPONSIVE
+// ============================================================
+
+@media (max-width: 1100px) {
+  .page__content:has(.students-container) {
+    padding: 0 2rem !important;
+  }
+}
+
+@media (max-width: 880px) {
+  .page__content:has(.students-container) {
+    padding: 0 1.5rem !important;
+  }
+
+  .research-areas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .apply-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .apply-cta-btn {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .page__content:has(.students-container) {
+    padding: 0 1rem !important;
+  }
+
+  .students-headline {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+
+  .apply-cta { padding: 1.25rem 1.25rem; }
+
+  .students-join {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}

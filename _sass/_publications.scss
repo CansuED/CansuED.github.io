@@ -1,146 +1,435 @@
-.publications-container {
-  max-width: 900px;
+// ============================================================
+//  PUBLICATIONS PAGE
+//  Consistent with research page: Outfit font, teal palette,
+//  same card system, same hero strip, dark mode
+// ============================================================
+
+.page__title { display: none !important; }
+
+// ── Container — mirrors research page exactly ─────────────────
+.page__content:has(.pubs-container) {
+  max-width: 1200px !important;
+  width: 100% !important;
+  padding: 0 3rem !important;
+  background-color: var(--bg-color) !important;
+}
+
+.pubs-container {
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0;
-}
-
-.publications-intro {
-  padding: 1.5rem 0;
-  margin-bottom: 2.5rem;
-  border-bottom: 1px solid #e8e8e8;
-  
-  p {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #374151;
-    margin-bottom: 1rem;
-    
-    &:last-child {
-      margin-bottom: 0;
-    }
-    
-    a {
-      color: #0ea5e9;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: all 0.2s ease;
-      
-      &:hover {
-        color: #0ea5e9;
-        border-bottom-color: #0ea5e9;
-      }
-    }
-  }
-}
-
-.publications-container h2 {
-  font-size: 1.4rem;
-  margin-top: 4rem;
-  margin-bottom: 1.5rem;
   padding-top: 2rem;
-  color: #2c3e50;
-  font-weight: 600;
-  border-top: 2px solid #e8e8e8;
-  
-  &:first-of-type {
-    margin-top: 0;
-    padding-top: 0;
-    border-top: none;
+}
+
+// ── Hero — identical structure to .research-hero ──────────────
+.pubs-hero {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 64px;
+    height: 3px;
+    background: linear-gradient(90deg, #52adc8, #3a9ab8);
+    border-radius: 9999px;
   }
 }
 
-.publication-list {
+.pubs-eyebrow {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #52adc8;
+  margin: 0 0 0.75rem;
+}
+
+.pubs-headline {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  margin: 0 0 1rem;
+  color: #1c2e40;
+  border: none !important;
+  padding: 0 !important;
+
+  span {
+    background: linear-gradient(135deg, #3a9ab8 0%, #52adc8 60%, #7dd3f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.pubs-tagline {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.7;
+  max-width: 580px;
+
+  a {
+    color: #3a9ab8;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(58, 154, 184, 0.3);
+    transition: color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      color: #1c7a96;
+      border-bottom-color: #1c7a96;
+    }
+  }
+}
+
+// ── Filters ───────────────────────────────────────────────────
+.pubs-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-bottom: 3rem;
 }
 
-.publication-item {
-  padding: 1.5rem 1.2rem;
-  margin-bottom: 1.2rem;
-  background: #f4f5f5;
-  border-left: 3px solid #dad9d9;
-  border-radius: 4px;
-  transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease, transform 0.3s ease;
-  
-  &:last-child {
-    margin-bottom: 0;
-  }
-  
+.pubs-filter {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 1rem;
+  background: transparent;
+  border: 1px solid rgba(82, 173, 200, 0.22);
+  border-radius: 9999px;
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.77rem;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  letter-spacing: 0.01em;
+
   &:hover {
-    background: #f4f5f5;
-    border-left-color: #52adc8;
-    transform: translateX(4px);
+    background: rgba(82, 173, 200, 0.07);
+    border-color: rgba(82, 173, 200, 0.4);
+    color: #3a9ab8;
   }
-  
-  .pub-authors {
-    font-size: 0.88rem;
-    color: #888;
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
-    font-weight: 400;
-  }
-  
-  .pub-title {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
-  }
-  
-  .pub-venue {
-    font-size: 0.88rem;
-    color: #0ea5e9;
-    font-style: normal;
-    margin-bottom: 0.7rem;
-    line-height: 1.5;
-    font-weight: 400;
-  }
-  
-  .pub-meta {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .pub-year {
-    font-size: 0.85rem;
-    color: #888;
-    font-weight: 500;
-  }
-  
-  .pub-link {
-    font-size: 0.85rem;
-    color: #0ea5e9;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: all 0.2s ease;
-    
-    &:hover {
-      color: #0ea5e9;
-      border-bottom-color: #0ea5e9;
-    }
+
+  &.active {
+    background: rgba(82, 173, 200, 0.1);
+    border-color: #52adc8;
+    color: #2e8fa8;
+    font-weight: 600;
   }
 }
 
-@media (max-width: 768px) {
-  .publications-container h2 {
-    font-size: 1.25rem;
+// ── Section ───────────────────────────────────────────────────
+.pubs-section {
+  margin-bottom: 3.5rem;
+
+  &:last-child { margin-bottom: 2rem; }
+}
+
+.pubs-section-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pubs-section-label {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #52adc8;
+  white-space: nowrap;
+}
+
+.pubs-section-rule {
+  flex: 1;
+  height: 1px;
+  background: #e8e8e8;
+}
+
+// ── Grid ──────────────────────────────────────────────────────
+.pubs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+// ── Card — same base as .project-card ─────────────────────────
+.pub-card {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 20px;
+  padding: 1.75rem;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.05);
+  transition:
+    transform         0.25s ease,
+    box-shadow        0.25s ease,
+    border-color      0.25s ease,
+    background-color  0.45s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #52adc8, #3a9ab8);
+    border-radius: 20px 20px 0 0;
+    opacity: 0;
+    transition: opacity 0.25s ease;
   }
-  
-  .publication-item {
-    padding: 1.2rem 1rem;
-    
-    .pub-title {
-      font-size: 1rem;
-    }
-    
-    .pub-authors {
-      font-size: 0.85rem;
-    }
-    
-    .pub-venue {
-      font-size: 0.9rem;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 4px 16px rgba(0, 0, 0, 0.06),
+      0 16px 40px rgba(82, 173, 200, 0.10);
+    border-color: rgba(82, 173, 200, 0.30);
+
+    &::before { opacity: 1; }
+  }
+
+  h3 {
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 1.0rem;
+    font-weight: 550;
+    color: #1c2e40;
+    margin: 0 0 0.65rem;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+}
+
+// ── Publication-specific text ─────────────────────────────────
+.pub-authors {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.83rem;
+  color: #9ca3af;
+  line-height: 1.65;
+  margin: 0 0 0.45rem;
+
+  strong {
+    color: #6b7280;
+    font-weight: 600;
+  }
+}
+
+.pub-venue {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: #52adc8;
+  line-height: 1.5;
+  margin: 0 0 1.2rem;
+  flex: 1;
+}
+
+// ── Badges — same as research page ───────────────────────────
+.card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.26rem 0.65rem;
+  border-radius: 9999px;
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: background 0.45s ease, border-color 0.45s ease, color 0.45s ease;
+}
+
+.badge-venue {
+  background: rgba(82, 173, 200, 0.09);
+  border: 1px solid rgba(82, 173, 200, 0.22);
+  color: #2e8fa8;
+}
+
+.badge-year {
+  background: rgba(107, 114, 128, 0.07);
+  border: 1px solid rgba(107, 114, 128, 0.18);
+  color: #6b7280;
+}
+
+.badge-inpress {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.22);
+  color: #d97706;
+}
+
+// ── CTA — same as research page ──────────────────────────────
+.card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: auto;
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #3a9ab8;
+  text-decoration: none !important;
+  border: none !important;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease, gap 0.2s ease;
+
+  .cta-arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover {
+    color: #1c7a96;
+    gap: 0.55rem;
+
+    .cta-arrow { transform: translateX(4px); }
+  }
+}
+
+// ============================================================
+//  DARK MODE
+// ============================================================
+
+[data-theme="dark"] {
+
+  .pubs-hero {
+    border-bottom-color: #2a2a2a;
+  }
+
+  .pubs-eyebrow { color: #64c9e6; }
+
+  .pubs-headline {
+    color: #e2ecf3;
+
+    span {
+      background: linear-gradient(135deg, #52adc8 0%, #7dd3f0 60%, #a8e6f8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
   }
+
+  .pubs-tagline {
+    color: #8fa8b8;
+
+    a {
+      color: #64c9e6;
+      border-bottom-color: rgba(100, 201, 230, 0.28);
+
+      &:hover { color: #7dd3f0; border-bottom-color: #7dd3f0; }
+    }
+  }
+
+  .pubs-filter {
+    border-color: rgba(100, 201, 230, 0.18);
+    color: #6b7280;
+
+    &:hover {
+      background: rgba(100, 201, 230, 0.07);
+      border-color: rgba(100, 201, 230, 0.38);
+      color: #64c9e6;
+    }
+
+    &.active {
+      background: rgba(100, 201, 230, 0.09);
+      border-color: #64c9e6;
+      color: #64c9e6;
+    }
+  }
+
+  .pubs-section-label { color: #64c9e6; }
+
+  .pubs-section-rule { background: rgba(255, 255, 255, 0.06); }
+
+  .pub-card {
+    background: rgba(30, 30, 35, 0.6);
+    border-color: rgba(255, 255, 255, 0.07);
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.20),
+      0 8px 24px rgba(0, 0, 0, 0.30);
+
+    &:hover {
+      border-color: rgba(100, 201, 230, 0.28);
+      box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.30),
+        0 16px 40px rgba(100, 201, 230, 0.08);
+    }
+
+    h3 { color: #e2ecf3; }
+  }
+
+  .pub-authors {
+    color: #4e6070;
+
+    strong { color: #7a9aaa; }
+  }
+
+  .pub-venue { color: #64c9e6; }
+
+  .badge-venue {
+    background: rgba(100, 201, 230, 0.08);
+    border-color: rgba(100, 201, 230, 0.18);
+    color: #64c9e6;
+  }
+
+  .badge-year {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.10);
+    color: #6b7280;
+  }
+
+  .badge-inpress {
+    background: rgba(245, 158, 11, 0.08);
+    border-color: rgba(245, 158, 11, 0.20);
+    color: #f59e0b;
+  }
+
+  .card-cta {
+    color: #64c9e6;
+    &:hover { color: #7dd3f0; }
+  }
+}
+
+// ============================================================
+//  RESPONSIVE
+// ============================================================
+
+@media (max-width: 1100px) {
+  .page__content:has(.pubs-container) { padding: 0 2rem !important; }
+}
+
+@media (max-width: 880px) {
+  .page__content:has(.pubs-container) { padding: 0 1.5rem !important; }
+
+  .pubs-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .page__content:has(.pubs-container) { padding: 0 1rem !important; }
+
+  .pubs-container { padding-top: 1.25rem; }
+
+  .pub-card { padding: 1.3rem; }
+
+  .pubs-filters { gap: 0.4rem; }
 }

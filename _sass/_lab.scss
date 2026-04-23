@@ -1,309 +1,255 @@
-// ============================================
-// LAB LANDING PAGE - HERO SECTION
-// ============================================
+// ============================================================
+//  LAB LANDING PAGE
+//  Outfit font · teal palette · light + dark mode
+//  All dark-mode tokens are 1:1 with _research.scss
+// ============================================================
 
 
-.lab-hero {
+// ── Lock scroll ──────────────────────────────────────────────
+html:has(.lab-page),
+html:has(.lab-page) body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+
+// ── Full-viewport hero ───────────────────────────────────────
+.lab-page {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+#lab-hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  transition: background 0.45s ease;
+
+  [data-theme="dark"] & { background: var(--bg-color); }
+}
+
+
+// ── Canvas ───────────────────────────────────────────────────
+#spiral-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+
+  &.loaded { opacity: 1; }
+}
+
+#canvas-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse 55% 55% at 50% 50%,
+    transparent 25%,
+    rgba(255, 255, 255, 0.6) 65%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+  transition: background 0.45s ease;
+
+  [data-theme="dark"] & {
+    background: radial-gradient(
+      ellipse 55% 55% at 50% 50%,
+      transparent 25%,
+      rgba(var(--bg-color-rgb, 9, 9, 14), 0.5) 65%,
+      var(--bg-color) 100%
+    );
+  }
+}
+
+
+// ── Text block ───────────────────────────────────────────────
+#lab-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 4rem 2rem;
-  background: var(--bg-color);
-  transition: background-color 0.45s ease;
+  pointer-events: none;
+  width: 100%;
+  max-width: 700px;
 }
 
+
+// ── Eyebrow ──────────────────────────────────────────────────
+//  Matches: .research-eyebrow
+// ─────────────────────────────────────────────────────────────
+.lab-eyebrow {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #52adc8;
+  margin: 0 0 0.75rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: lfu 0.7s ease 0.3s forwards;
+
+  [data-theme="dark"] & { color: #64c9e6 !important; }
+}
+
+
+// ── Title wrapper ────────────────────────────────────────────
+//  Matches: .research-headline
+// ─────────────────────────────────────────────────────────────
 .lab-hero-title {
-  font-size: 4rem;
-  font-weight: 700;
-  color: var(--text-color);
-  margin-bottom: 1.5rem;
-  line-height: 1.3;
+  font-family: 'Outfit', system-ui, sans-serif !important;
+  font-size: clamp(2rem, 4vw, 3rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.12 !important;
+  color: #1c2e40 !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 0 1rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.05em;
+  opacity: 0;
+  transform: translateY(14px);
+  animation: lfu 0.8s ease 0.45s forwards;
+}
+
+
+// ── Plain title spans ("Welcome to the" / "Lab") ─────────────
+//  Explicitly coloured so the site's global dark-mode white
+//  cannot override them
+// ─────────────────────────────────────────────────────────────
+.lab-title-plain {
+  color: #1c2e40;
   transition: color 0.45s ease;
 
-  .lab-title-line-1 {
-    display: block;
-    opacity: 0;
-    animation: fadeIn 0.6s ease 0.2s forwards;
-  }
-
-  .lab-title-highlight {
-    display: block;
-    background: linear-gradient(135deg, #52adc8 0%, #3d8fa3 50%, #52adc8 100%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    opacity: 0;
-    animation: fadeInScale 0.8s ease 0.6s forwards, shimmer 3s ease-in-out 1.4s infinite;
-    transform-origin: center;
-  }
-
-  .lab-title-line-3 {
-    display: block;
-    opacity: 0;
-    animation: fadeIn 0.6s ease 1s forwards;
-  }
+  [data-theme="dark"] & { color: #e2ecf3 !important; }
 }
 
-[data-theme="dark"] .lab-hero-title .lab-title-highlight {
-  background: linear-gradient(135deg, #5bc0de 0%, #7dd3f0 50%, #5bc0de 100%);
+
+// ── Gradient highlight span ("D^4 Sustainable Futures") ──────
+//  Matches: .research-headline span  (dark gradient)
+// ─────────────────────────────────────────────────────────────
+.lab-title-highlight {
+  background: linear-gradient(135deg, #3a9ab8 0%, #52adc8 60%, #7dd3f0 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: labShimmer 4s linear 1.2s infinite;
+
+  [data-theme="dark"] & {
+    background: linear-gradient(135deg, #52adc8 0%, #7dd3f0 60%, #a8e6f8 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
 }
 
+
+// ── Subtitle ─────────────────────────────────────────────────
+//  Matches: .research-tagline  (dark: #8fa8b8)
+// ─────────────────────────────────────────────────────────────
 .lab-hero-subtitle {
-  font-size: 1.0rem;
-  color: var(--text-secondary);
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  line-height: 1.6;
+  font-family: 'Outfit', system-ui, sans-serif !important;
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+  color: #6b7280 !important;
+  max-width: 540px;
+  margin: 0;
   opacity: 0;
-  animation: fadeInUp 0.8s ease 1.3s forwards;
+  transform: translateY(10px);
+  animation: lfu 0.8s ease 0.65s forwards;
   transition: color 0.45s ease;
+
+  [data-theme="dark"] & { color: #8fa8b8 !important; }
 }
 
-// Enhanced Animations
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
-@keyframes fadeInScale {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: 0% center;
-  }
-  50% {
-    background-position: 100% center;
-  }
-  100% {
-    background-position: 0% center;
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.lab-title-highlight-float {
-  animation: fadeInScale 0.8s ease 0.6s forwards, 
-             float 3s ease-in-out 1.4s infinite;
-}
-
-// ============================================
-// LAB PAGE DARK MODE STYLES
-// ============================================
-
-.lab-hero {
-  transition: background-color 0.45s ease;
-}
-
-[data-theme="dark"] .lab-hero {
-  background-color: #1a1a1a !important;
-}
-
-.lab-hero-title {
+// ── Strong inside subtitle ───────────────────────────────────
+//  Explicit class on the element so we win every specificity war
+// ─────────────────────────────────────────────────────────────
+.lab-subtitle-strong {
+  font-weight: 600 !important;
+  color: #374151 !important;
   transition: color 0.45s ease;
+
+  [data-theme="dark"] & { color: #b8c8d4 !important; }
 }
 
-[data-theme="dark"] .lab-hero-title {
-  color: #e8e8e8 !important;
+
+// ── Animations ───────────────────────────────────────────────
+@keyframes lfu {
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.lab-hero-subtitle {
-  transition: color 0.45s ease;
+@keyframes labShimmer {
+  0%   { background-position: 0%   center; }
+  50%  { background-position: 100% center; }
+  100% { background-position: 0%   center; }
 }
 
-[data-theme="dark"] .lab-hero-subtitle {
-  color: #d0d0d0 !important;
-}
 
-.lab-hero-scroll svg {
-  transition: color 0.45s ease;
-}
+// ============================================================
+//  LAB CONTENT PAGES — dark mode
+//  Tokens identical to research page dark mode
+// ============================================================
 
-[data-theme="dark"] .lab-hero-scroll svg {
-  color: #b0b0b0 !important;
-}
-
-// Lab content pages
 [data-theme="dark"] {
+
   .lab-about-header {
     border-bottom-color: #2a2a2a;
-    
+
     .lab-tagline {
-      color: #b8b8b8;
-      
-      strong {
-        color: #e8e8e8;
-      }
+      color: #8fa8b8;
+      strong { color: #e2ecf3; }
     }
   }
-  
+
   .lab-about-content {
+
     .welcome-section {
-      h2 {
-        color: #f0f0f0;
-      }
-      
-      p {
-        color: #b8b8b8;
-      }
+      h2 { color: #e2ecf3; }
+      p  { color: #8fa8b8; }
     }
-    
-    .research-section {
-      background: #242424;
-      border-left-color: #333;
-      transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;  
-      
-      &:hover {
-        background: rgba(82, 173, 200, 0.08);
-        border-left-color: #64c9e6;
-      }
-      
-      h3 {
-        color: #e8e8e8;
-      }
-      
-      p {
-        color: #b8b8b8;
-      }
-    }
-    
+
+    .research-section,
     .collaboration-section {
-      background: #242424;
-      border-left-color: #333;
-      transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+      background: rgba(30, 30, 35, 0.6);
+      border-left-color: rgba(255, 255, 255, 0.08);
+      transition: background 0.45s ease, border-color 0.25s ease;
 
-      
       &:hover {
-        background: rgba(82, 173, 200, 0.08);
+        background: rgba(100, 201, 230, 0.07);
         border-left-color: #64c9e6;
       }
-      
-      p {
-        color: #b8b8b8;
-        
-        strong {
-          color: #e8e8e8;
-        }
-      }
+
+      h3 { color: #e2ecf3; }
+      p  { color: #8fa8b8; }
     }
   }
-}
 
-// Lab member cards
-[data-theme="dark"] .lab-member-card {
-  background: #242424 !important;
-  border-color: #2a2a2a !important;
+  .lab-member-card {
+    background: rgba(30, 30, 35, 0.6) !important;
+    border-color: rgba(255, 255, 255, 0.07) !important;
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.20),
+      0 8px 24px rgba(0, 0, 0, 0.30) !important;
 
-  h3 {
-    color: #e8e8e8 !important;
-  }
-
-  .member-role {
-    color: #5bc0de !important;
-  }
-
-  .member-affiliation {
-    color: #b0b0b0 !important;
-  }
-
-  p {
-    color: #d0d0d0 !important;
-  }
-}
-
-// Service Page Dark Mode Styles - Enhanced
-[data-theme="dark"] {
-  .service-intro {
-    border-bottom-color: #2a2a2a;
-    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
-    
-    p {
-      color: #b8b8b8;
-    }
-  }
-  
-  .service-container h2 {
-    color: #f0f0f0;
-    font-weight: 600;
-    border-top-color: #2a2a2a;
-    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
-
-  }
-  
-  .service-item {
-    background: #242424;
-    border-left-color: #333;
-    transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease;
-    
-    &:hover {
-      background: rgba(82, 173, 200, 0.08);
-      border-left-color: #64c9e6;
-    }
-    
-    h3 {
-      color: #e8e8e8;
-      font-weight: 500;
-    }
-    
-    .service-role {
-      color: #64c9e6;
-      background: rgba(82, 173, 200, 0.12);
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      font-weight: 500;
-    }
-    
-    .service-year {
-      color: #8a8a8a;
-    }
+    h3                  { color: #e2ecf3 !important; }
+    .member-role        { color: #64c9e6 !important; }
+    .member-affiliation { color: #8fa8b8 !important; }
+    p                   { color: #8fa8b8 !important; }
   }
 }

@@ -1,4 +1,7 @@
-// Core layout styles used across all pages
+// ============================================================
+//  SITE-WIDE BASE STYLES
+// ============================================================
+
 html {
   scroll-behavior: smooth;
 }
@@ -20,6 +23,13 @@ body.layout--splash {
   height: 100vh !important;
 }
 
+// Lock the html scroll container too — body alone isn't enough
+html:has(body.layout--home),
+html:has(body.layout--splash) {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
 .page__content {
   max-width: 800px !important;
   width: 100%;
@@ -29,47 +39,15 @@ body.layout--splash {
   box-sizing: border-box;
   padding: 0 1em;
 
-  h1 {
-    font-size: 2em;
-    margin-bottom: 1em;
-    color: #2c3e50;
-    font-weight: 600;
-  }
-
-  h2 {
-    font-size: 1.6em;
-    margin-top: 1.5em;
-    margin-bottom: 0.8em;
-    color: #2c3e50;
-    font-weight: 600;
-  }
-
-  h3 {
-    font-size: 1.3em;
-    margin-top: 1.2em;
-    margin-bottom: 0.6em;
-    color: #2c3e50;
-    font-weight: 600;
-  }
-
-  p {
-    margin-bottom: 1.3em;
-    color: #444;
-  }
-
-  a {
-    color: #52adc8;
-    transition: color 0.2s ease;
-    
-    &:hover {
-      color: #3d8fa3;
-    }
-  }
+  h1 { font-size: 2em;   margin-bottom: 1em;   color: #2c3e50; font-weight: 600; }
+  h2 { font-size: 1.6em; margin-top: 1.5em;    margin-bottom: .8em;  color: #2c3e50; font-weight: 600; }
+  h3 { font-size: 1.3em; margin-top: 1.2em;    margin-bottom: .6em;  color: #2c3e50; font-weight: 600; }
+  p  { margin-bottom: 1.3em; color: #444; }
+  a  { color: #52adc8; transition: color .2s ease;
+       &:hover { color: #3d8fa3; } }
 }
 
-.sidebar {
-  display: none !important;
-}
+.sidebar { display: none !important; }
 
 .page {
   width: 100% !important;
@@ -94,8 +72,319 @@ body.layout--splash {
   padding: 0 !important;
 }
 
+// On homepage: pin #main to exactly the remaining viewport height
+body.layout--home #main {
+  height: calc(100vh - 70px) !important;
+  overflow: hidden !important;
+}
+
+body.layout--home .page__inner-wrap {
+  height: 100%;
+  min-height: unset;
+  overflow: hidden !important;
+  padding-bottom: 0 !important;
+}
+
 @media (max-width: 1180px) {
-  #main {
-    margin-top: 60px !important;
+  #main { margin-top: 60px !important; }
+  body.layout--home #main { height: calc(100vh - 60px) !important; }
+}
+
+
+// ============================================================
+//  THEME TRANSITION — premium radial sweep from toggle button
+// ============================================================
+
+// ── View Transitions API (Chrome 111+, Edge 111+) ────────────
+// JS in index.md sets --vt-x / --vt-y to the toggle's exact
+// centre so the reveal circle originates from that button.
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) {
+    // Freeze the old state in place; new state sweeps over it
+    animation: none;
+    mix-blend-mode: normal;
   }
+  ::view-transition-new(root) {
+    animation: vt-radial-in 0.9s cubic-bezier(0.4, 0, 0.15, 1) forwards;
+    mix-blend-mode: normal;
+  }
+  @keyframes vt-radial-in {
+    from { clip-path: circle(0%   at var(--vt-x, 95%) var(--vt-y, 4%)); }
+    to   { clip-path: circle(160% at var(--vt-x, 95%) var(--vt-y, 4%)); }
+  }
+}
+
+// ── CSS fallback (Firefox, Safari < 18, older browsers) ──────
+// Added for ~500 ms via JS class toggle; removed afterwards so
+// it never slows down normal hover / interaction transitions.
+html.is-theme-transitioning,
+html.is-theme-transitioning * {
+  transition:
+    color            0.85s cubic-bezier(0.4, 0, 0.15, 1),
+    background-color 0.85s cubic-bezier(0.4, 0, 0.15, 1),
+    border-color     0.85s cubic-bezier(0.4, 0, 0.15, 1),
+    box-shadow       0.85s cubic-bezier(0.4, 0, 0.15, 1),
+    fill             0.85s cubic-bezier(0.4, 0, 0.15, 1) !important;
+}
+
+// Honour the user's motion preference — instant swap, no animation
+@media (prefers-reduced-motion: reduce) {
+  html.is-theme-transitioning,
+  html.is-theme-transitioning * {
+    transition: none !important;
+  }
+}
+
+
+// ============================================================
+//  HOMEPAGE  — canvas, glow, hero
+// ============================================================
+
+#dotted-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-glow {
+  position: fixed;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(720px, 92vw);
+  height: min(420px, 52vh);
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 255, 255, 0.70) 28%,
+    rgba(255, 255, 255, 0.30) 55%,
+    transparent 72%
+  );
+  filter: blur(16px);
+  pointer-events: none;
+  z-index: 1;
+  transition: background .4s ease;
+}
+
+// ── Hero wrapper ─────────────────────────────────────────────
+.homepage-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem 1.5rem 2rem;
+  animation: hero-rise .8s cubic-bezier(.22, 1, .36, 1) both;
+
+  p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: inherit;
+    font-size: inherit;
+    &::before, &::after { content: none !important; }
+  }
+}
+
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.profile-image {
+  display: block;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, .97);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .09);
+  transition: box-shadow .3s ease;
+
+  &:hover {
+    box-shadow: 0 6px 28px rgba(82, 173, 200, .24);
+  }
+}
+
+
+// ── Hero name ─────────────────────────────────────────────────
+.hero-name {
+  font-family: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -.5px;
+  margin: 0 0 .5rem;
+  padding: 0;
+  border: none;
+  background: none;
+
+  .name-first {
+    color: #1c2e40;
+    margin-right: .1em;
+  }
+
+  .name-last {
+    color: #3a9ab8;
+  }
+}
+
+// ── Subtitle lines ────────────────────────────────────────────
+.hero-title,
+.hero-institution {
+  font-family: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+  padding: 0;
+  border: none;
+  background: none;
+  display: block;
+  &::before, &::after { content: none !important; }
+}
+
+.hero-title {
+  font-size: clamp(.9rem, 1.8vw, 1.05rem);
+  font-weight: 400;
+  letter-spacing: .02em;
+  color: #3c5263;
+  margin: 0 0 .25rem;
+}
+
+.hero-institution {
+  font-size: clamp(.8rem, 1.5vw, .9rem);
+  font-weight: 300;
+  letter-spacing: .02em;
+  color: #7a93a6;
+  margin: 0 0 1.5rem;
+}
+
+
+// ── Social links ─────────────────────────────────────────────
+.social-links {
+  display: flex;
+  gap: .55rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: .88rem;
+  text-decoration: none;
+  color: #4a6070;
+  background: rgba(255, 255, 255, .82);
+  border: 1px solid rgba(82, 173, 200, .20);
+  backdrop-filter: blur(6px);
+  transition:
+    background   .2s ease,
+    color        .2s ease,
+    border-color .2s ease,
+    box-shadow   .2s ease;
+
+  &:hover {
+    background:   #3a9ab8;
+    color:        #fff;
+    border-color: #3a9ab8;
+    box-shadow:   0 4px 14px rgba(58,154,184,.32);
+    text-decoration: none;
+  }
+
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      animation: icon-in .5s #{.75s + ($i - 1) * .06s} ease both;
+    }
+  }
+}
+
+@keyframes icon-in {
+  from { opacity: 0; transform: scale(.7); }
+  to   { opacity: 1; transform: scale(1);  }
+}
+
+
+// ============================================================
+//  DARK MODE
+// ============================================================
+
+@mixin dark-mode {
+  .hero-glow {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(14, 22, 36, .92) 0%,
+      rgba(10, 18, 30, .60) 30%,
+      rgba(6,  12, 22, .20) 55%,
+      transparent 72%
+    );
+  }
+
+  .profile-image {
+    // Warm cream ring — premium, not cold
+    border-color: rgba(240, 232, 220, .18);
+    box-shadow: 0 6px 32px rgba(0, 0, 0, .50);
+  }
+
+  .hero-name {
+    // Warm off-white — creamy, never harsh bright white
+    .name-first { color: #f0ece4; }
+    // Soft desaturated teal — on-brand but calm, not neon
+    .name-last  { color: #8ec4d4; }
+  }
+
+  // Warm light grey — readable and gentle
+  .hero-title       { color: #c4cdd4; }
+  // Muted, recedes naturally into the background
+  .hero-institution { color: #6a8694; }
+
+  .social-link {
+    // Cream icon on near-transparent dark — minimal, refined
+    color:        #dde6ec;
+    background:   rgba(255, 255, 255, .06);
+    border-color: rgba(255, 255, 255, .10);
+
+    &:hover {
+      // Gentle teal wash on hover — not neon, just a soft glow
+      background:   rgba(58, 154, 184, .25);
+      color:        #f0ece4;
+      border-color: rgba(58, 154, 184, .50);
+      box-shadow:   0 4px 16px rgba(58, 154, 184, .16);
+    }
+  }
+}
+
+html.dark               { @include dark-mode; }
+html[data-theme="dark"] { @include dark-mode; }
+body.dark-theme         { @include dark-mode; }
+body[data-theme="dark"] { @include dark-mode; }
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]):not(.light) body:not(.light-theme) {
+    @include dark-mode;
+  }
+}
+
+
+// ============================================================
+//  RESPONSIVE
+// ============================================================
+
+@media (max-width: 640px) {
+  .profile-image    { width: 108px; height: 108px; }
+  .hero-name        { font-size: 2.1rem; }
+  .hero-title       { font-size: .86rem; }
+  .hero-institution { font-size: .78rem; }
+  .hero-glow        { width: 88vw; height: 36vh; top: 36%; }
+}
+
+@media (max-width: 380px) {
+  .hero-name    { font-size: 1.85rem; }
+  .social-links { gap: .4rem; }
 }
