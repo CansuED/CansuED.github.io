@@ -10,7 +10,20 @@ classes: wide
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-<div id="dot-wave" aria-hidden="true"></div>
+<!-- Self-contained canvas styles — no external SCSS needed -->
+<style>
+#dotted-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  display: block;
+}
+</style>
+
+<canvas id="dotted-canvas" aria-hidden="true"></canvas>
 <div class="hero-glow" aria-hidden="true"></div>
 
 <div class="homepage-content">
@@ -47,59 +60,101 @@ classes: wide
 
 </div>
 
+<!-- ============================================================
+     DOT-WAVE ANIMATION  (self-contained, GitHub Pages safe)
+     ============================================================ -->
 <script>
-(function() {
-  var COLS = 18;
-  var ROWS = 10;
-  var SPEED = 2200;
+(function () {
+  'use strict';
 
-  function build() {
-    var container = document.getElementById('dot-wave');
-    if (!container) { setTimeout(build, 100); return; }
-    container.innerHTML = '';
-    var wW = window.innerWidth;
-    var wH = window.innerHeight;
-    var spacingX = wW / (COLS - 1);
-    var spacingY = wH / (ROWS - 1);
-    for (var row = 0; row < ROWS; row++) {
-      for (var col = 0; col < COLS; col++) {
-        var dot = document.createElement('div');
-        dot.className = 'dw-dot';
-        var x = col * spacingX;
-        var y = row * spacingY;
-        var phaseDelay = ((col * 0.3 + row * 0.5) / (COLS * 0.3 + ROWS * 0.5)) * SPEED;
-        var depth = 0.4 + (row / (ROWS - 1)) * 0.6;
-        var size = Math.max(1.5, 4 * depth);
-        var opacity = Math.min(0.22, 0.04 + depth * 0.18);
-        dot.style.cssText = 'position:absolute;border-radius:50%;left:' + x.toFixed(1) + 'px;top:' + y.toFixed(1) + 'px;width:' + size.toFixed(1) + 'px;height:' + size.toFixed(1) + 'px;opacity:' + opacity.toFixed(3) + ';animation:dw-bob ' + SPEED + 'ms ease-in-out ' + phaseDelay.toFixed(0) + 'ms infinite alternate;background:rgb(58,154,184);transform:translateY(0)';
-        container.appendChild(dot);
+  var canvas = document.getElementById('dotted-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+
+  var SEPARATION = 150;
+  var AMOUNTX    = 40;
+  var AMOUNTY    = 60;
+  var CAM_Y      = 355;
+  var CAM_Z      = 1220;
+  var FOV_DEG    = 60;
+  var count      = 0;
+
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  function isDark() {
+    var el   = document.documentElement;
+    var body = document.body;
+    return (
+      el.classList.contains('dark')            ||
+      el.getAttribute('data-theme') === 'dark' ||
+      body.classList.contains('dark-theme')    ||
+      body.getAttribute('data-theme') === 'dark'
+    );
+  }
+
+  function draw() {
+    var W = canvas.width;
+    var H = canvas.height;
+    ctx.clearRect(0, 0, W, H);
+
+    var dark = isDark();
+    var dotR = dark ? 82  : 58;
+    var dotG = dark ? 160 : 154;
+    var dotB = dark ? 190 : 184;
+
+    var fovFactor = H / (2 * Math.tan((FOV_DEG * Math.PI / 180) / 2));
+
+    for (var ix = 0; ix < AMOUNTX; ix++) {
+      for (var iy = 0; iy < AMOUNTY; iy++) {
+        var x3d = ix * SEPARATION - (AMOUNTX * SEPARATION) / 2;
+        var z3d = iy * SEPARATION - (AMOUNTY * SEPARATION) / 2;
+        var y3d = Math.sin((ix + count) * 0.3) * 50 + Math.sin((iy + count) * 0.5) * 50;
+
+        var depth = CAM_Z - z3d;
+        if (depth < 1) continue;
+
+        var scale = fovFactor / depth;
+        var sx    = W / 2 + x3d * scale;
+        var sy    = H / 2 - (y3d - CAM_Y) * scale;
+
+        if (sx < -20 || sx > W + 20 || sy < -20 || sy > H + 20) continue;
+
+        var radius  = Math.max(0.4, 4 * scale);
+        var opacity = Math.min(0.22, scale * 58);
+
+        ctx.fillStyle = 'rgba(' + dotR + ',' + dotG + ',' + dotB + ',' + opacity.toFixed(3) + ')';
+        ctx.beginPath();
+        ctx.arc(sx, sy, radius, 0, 6.2832);
+        ctx.fill();
       }
     }
+
+    count += 0.04;
+    requestAnimationFrame(draw);
   }
 
-  var style = document.createElement('style');
-  style.textContent = '#dot-wave{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}@keyframes dw-bob{0%{transform:translateY(0)}100%{transform:translateY(-38px)}}html[data-theme=dark] #dot-wave .dw-dot,body.dark-theme #dot-wave .dw-dot{background:rgb(82,160,190)!important}';
-  document.head.appendChild(style);
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', build);
-  } else {
-    build();
-  }
-
-  var resizeTimer;
-  window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(build, 150);
-  });
+  resize();
+  draw();
+  window.addEventListener('resize', resize);
 }());
 </script>
 
+<!-- ============================================================
+     PREMIUM THEME TRANSITION
+     ============================================================ -->
 <script>
 (function () {
+  'use strict';
+
   function isThemeToggle(el) {
     if (!el) return false;
-    var sig = (el.className || '') + (el.title || '') + (el.getAttribute('aria-label') || '') + (el.innerHTML || '');
+    var sig = (el.className || '') +
+              (el.title     || '') +
+              (el.getAttribute('aria-label') || '') +
+              (el.innerHTML  || '');
     return /dark|light|theme|color.?scheme|sun|moon|☀|🌙/i.test(sig);
   }
 
@@ -116,15 +171,21 @@ classes: wide
 
   document.addEventListener('click', function (e) {
     if (_replaying) return;
+
     var btn = e.target;
     while (btn && btn !== document.documentElement) {
-      if ((btn.tagName === 'BUTTON' || btn.getAttribute('role') === 'button') && isThemeToggle(btn)) break;
+      if (
+        (btn.tagName === 'BUTTON' || btn.getAttribute('role') === 'button') &&
+        isThemeToggle(btn)
+      ) break;
       btn = btn.parentElement;
     }
     if (!btn || btn === document.documentElement) return;
-    var r = btn.getBoundingClientRect();
-    document.documentElement.style.setProperty('--vt-x', (r.left + r.width / 2).toFixed(1) + 'px');
-    document.documentElement.style.setProperty('--vt-y', (r.top + r.height / 2).toFixed(1) + 'px');
+
+    var r  = btn.getBoundingClientRect();
+    document.documentElement.style.setProperty('--vt-x', (r.left + r.width  / 2).toFixed(1) + 'px');
+    document.documentElement.style.setProperty('--vt-y', (r.top  + r.height / 2).toFixed(1) + 'px');
+
     if (typeof document.startViewTransition === 'function') {
       e.stopImmediatePropagation();
       document.startViewTransition(function () {
