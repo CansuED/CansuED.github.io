@@ -28,11 +28,8 @@ permalink: /lab/
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+(function () {
   'use strict';
-
-  var seed = 1234;
-  function rng(){ seed=(seed*9301+49297)%233280; return seed/233280; }
 
   var canvas = document.getElementById('spiral-canvas');
   if (!canvas) return;
@@ -40,144 +37,149 @@ document.addEventListener('DOMContentLoaded', function () {
   var dpr = window.devicePixelRatio || 1;
   var W = 0, H = 0;
 
-  function resize(){
+  function resize() {
     W = window.innerWidth;
     H = window.innerHeight;
     canvas.style.width  = W + 'px';
     canvas.style.height = H + 'px';
     canvas.width  = W * dpr;
     canvas.height = H * dpr;
-    ctx.setTransform(dpr,0,0,dpr,0,0);
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
-  var ZOOM  = 100;
-  var YOF   = 28;
-  var NS    = 4000;
-
-  var CAM_SPEED = 0.012;
-  var CAM_RANGE = 3800;
-  var CAM_Z0    = -400;
-  var ROT_SPEED = 0.000018;
-
-  function clamp(v,a,b){return Math.min(Math.max(v,a),b);}
-  function lerp(a,b,t){return a*(1-t)+b*t;}
-  function eg(p,g){return p<.5?.5*Math.pow(2*p,g):1-.5*Math.pow(2*(1-p),g);}
-  function ee(x){
-    if(x<=0)return 0; if(x>=1)return 1;
-    return Math.pow(2,-8*x)*Math.sin((x*8-.75)*(2*Math.PI)/4.5)+1;
-  }
-  function easeInOut(t){ return t<.5 ? 2*t*t : -1+(4-2*t)*t; }
-
-  function spiral(p){
-    p = clamp(1.2*p, 0, 1);
-    p = eg(p, 1.8);
-    var th = 2*Math.PI*6*Math.sqrt(p);
-    var r  = 170*Math.sqrt(p);
-    return { x: r*Math.cos(th), y: r*Math.sin(th)+YOF };
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    /* Reset all prev-positions on resize so no stale streak lines appear */
+    for (var i = 0; i < pts.length; i++) { pts[i].psx = null; pts[i].psy = null; }
   }
 
-  function dark(){ return document.documentElement.getAttribute('data-theme')==='dark'; }
-  function themeBg(){
-    if (!dark()) return '#ffffff';
-    var val = getComputedStyle(document.documentElement).getPropertyValue('--bg-color').trim();
-    return val || '#09090e';
-  }
+  /* ── Seeded RNG ──────────────────────────────────────── */
+  var seed = 42;
+  function rng() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
 
-  var stars = [];
-  for (var i = 0; i < NS; i++){
-    var a  = rng()*Math.PI*2;
-    var d  = 30*rng()+15;
-    var sl = (1-Math.pow(1-rng(),3))/1.3;
-    var zr = lerp(0.5*CAM_Z0, CAM_RANGE+CAM_Z0, rng());
-    stars.push({
-      a:  a,
-      d:  d,
-      rd: rng()>.5 ? 1 : -1,
-      er: 1.2+rng()*.8,
-      fs: .7+rng()*.6,
-      dx: d*Math.cos(a),
-      dy: d*Math.sin(a),
-      sl: sl,
-      z:  lerp(zr, CAM_RANGE/2, .3*sl),
-      sw: Math.pow(rng(), 2)
+  /* ── Particle field ──────────────────────────────────── */
+  var N        = 520;
+  var NEAR     = 40;
+  var FAR      = 1400;
+  var SPEED    = 180;   /* units/second — feel free to tweak */
+  var SPREAD_X = 580;
+  var SPREAD_Y = 400;
+
+  var pts = [];
+  for (var i = 0; i < N; i++) {
+    pts.push({
+      x:   (rng() - 0.5) * 2 * SPREAD_X,
+      y:   (rng() - 0.5) * 2 * SPREAD_Y,
+      z:   NEAR + rng() * (FAR - NEAR),
+      psx: null,   /* previous screen x — used to draw streak */
+      psy: null,
+      r:   0.7 + rng() * 2.3,
+      b:   0.35 + rng() * 0.65   /* brightness factor */
     });
   }
 
-  function drawStar(s, p, camZ, col){
-    var sp = spiral(s.sl);
-    var q  = p - s.sl;
-    if (q <= 0) return;
-
-    var dp = clamp(4*q, 0, 1);
-    var sx, sy;
-
-    if (dp < .3){
-      var f = easeInOut(dp/.3);
-      sx = lerp(sp.x, sp.x+s.dx*.3, f);
-      sy = lerp(sp.y, sp.y+s.dy*.3, f);
-    } else if (dp < .7){
-      var mp = (dp-.3)/.4;
-      var cs = Math.sin(mp*Math.PI)*s.rd*1.5;
-      var bx = sp.x+s.dx*.3, by = sp.y+s.dy*.3;
-      sx = lerp(bx, sp.x+s.dx*.7, easeInOut(mp)) + (-s.dy*.4*cs)*mp;
-      sy = lerp(by, sp.y+s.dy*.7, easeInOut(mp)) + ( s.dx*.4*cs)*mp;
-    } else {
-      var fp = easeInOut((dp-.7)/.3);
-      var sa = s.a + 1.2*s.rd*fp*Math.PI;
-      sx = lerp(sp.x+s.dx*.7, sp.x+s.d*s.er*1.5*Math.cos(sa), fp);
-      sy = lerp(sp.y+s.dy*.7, sp.y+s.d*s.er*1.5*Math.sin(sa), fp);
-    }
-
-    if (s.z <= camZ) return;
-    var dep = s.z - camZ;
-    var px  = ZOOM*sx/dep;
-    var py  = ZOOM*sy/dep;
-    var sm  = dp<.6 ? 1+dp*.2 : lerp(1.2, s.fs, (dp-.6)/.4);
-    var sw  = 400*(8.5*s.sw*sm)/dep;
-
-    var alpha = clamp(dep / (CAM_RANGE * 0.3), 0, 1);
-    ctx.globalAlpha = alpha;
-    ctx.fillStyle   = col;
-    ctx.beginPath();
-    ctx.arc(px, py, Math.max(sw/2, .3), 0, Math.PI*2);
-    ctx.fill();
-    ctx.globalAlpha = 1;
+  /* ── Theme helpers ───────────────────────────────────── */
+  function dark() {
+    var el = document.documentElement;
+    return el.getAttribute('data-theme') === 'dark' ||
+           el.classList.contains('dark') ||
+           document.body.classList.contains('dark-theme');
+  }
+  function themeBg() {
+    if (!dark()) return '#ffffff';
+    var v = getComputedStyle(document.documentElement).getPropertyValue('--bg-color').trim();
+    return v || '#0d0d14';
   }
 
-  var t0 = null;
+  /* ── Animation loop ──────────────────────────────────── */
+  var t0 = null, last = null;
 
-  function frame(now){
+  function frame(now) {
     requestAnimationFrame(frame);
-    if (!t0) t0 = now;
-    var elapsed = now - t0;
+    if (!t0) { t0 = now; last = now; }
+    var dt      = Math.min((now - last) / 1000, 0.05);   /* seconds, capped */
+    last        = now;
+    var elapsed = (now - t0) / 1000;
 
-    var rawZ = (elapsed * CAM_SPEED) % CAM_RANGE;
-    var camZ = CAM_Z0 + rawZ;
-    var p    = rawZ / CAM_RANGE;
-    var rot  = elapsed * ROT_SPEED;
+    var W2 = W / 2, H2 = H / 2;
+    var dk = dark();
 
-    var bg  = themeBg();
-    var dot = dark() ? 'rgba(100,201,230,0.45)' : 'rgba(28,46,64,0.32)';
+    /* Brand teal: light mode (58,154,184) | dark mode (100,201,230) */
+    var dotR = dk ? 100 : 58;
+    var dotG = dk ? 201 : 154;
+    var dotB = dk ? 230 : 184;
+    var dotCol = 'rgb(' + dotR + ',' + dotG + ',' + dotB + ')';
 
-    ctx.fillStyle = bg;
-    ctx.globalAlpha = 0.18;
+    /* Soft trail — overdraw background at low opacity each frame */
+    ctx.fillStyle  = themeBg();
+    ctx.globalAlpha = 0.28;
     ctx.fillRect(0, 0, W, H);
     ctx.globalAlpha = 1;
 
-    ctx.save();
-    ctx.translate(W/2, H/2);
-    ctx.rotate(rot);
-    for (var j = 0; j < stars.length; j++){
-      drawStar(stars[j], p, camZ, dot);
+    /* Gentle sinusoidal camera sway — feels alive but not nauseating */
+    var camX = Math.sin(elapsed * 0.17) * 24;
+    var camY = Math.cos(elapsed * 0.12) * 16;
+
+    for (var i = 0; i < pts.length; i++) {
+      var p = pts[i];
+
+      /* Advance toward camera */
+      p.z -= SPEED * dt;
+
+      /* Wrap: reset particle to far plane individually — no global jump */
+      if (p.z < NEAR) {
+        p.x   = (rng() - 0.5) * 2 * SPREAD_X;
+        p.y   = (rng() - 0.5) * 2 * SPREAD_Y;
+        p.z   = FAR;
+        p.psx = null;
+        p.psy = null;
+        continue;
+      }
+
+      /* Perspective projection */
+      var sc = 400 / p.z;
+      var sx = W2 + (p.x + camX) * sc;
+      var sy = H2 + (p.y + camY) * sc;
+
+      /* Cull off-screen */
+      if (sx < -10 || sx > W + 10 || sy < -10 || sy > H + 10) {
+        p.psx = null; p.psy = null; continue;
+      }
+
+      /* Depth-based opacity: fade in from far, fade out when very close */
+      var farFade  = Math.min(1, (FAR - p.z) / (FAR * 0.22));
+      var nearFade = Math.min(1, (p.z - NEAR) / (NEAR * 3.5));
+      var alpha    = p.b * farFade * nearFade * 0.58;
+      if (alpha <= 0.002) { p.psx = null; p.psy = null; continue; }
+
+      ctx.globalAlpha = Math.min(alpha, 0.55);
+      ctx.fillStyle   = dotCol;
+      ctx.strokeStyle = dotCol;
+
+      /* Draw streak from previous position — creates natural motion trail */
+      if (p.psx !== null) {
+        var r = Math.max(0.25, p.r * sc * 0.55);
+        ctx.lineWidth = Math.max(0.4, r * 1.7);
+        ctx.lineCap   = 'round';
+        ctx.beginPath();
+        ctx.moveTo(p.psx, p.psy);
+        ctx.lineTo(sx, sy);
+        ctx.stroke();
+      }
+
+      /* Draw dot at current tip */
+      ctx.beginPath();
+      ctx.arc(sx, sy, Math.max(0.3, p.r * sc * 0.55), 0, Math.PI * 2);
+      ctx.fill();
+
+      p.psx = sx;
+      p.psy = sy;
     }
-    ctx.restore();
+
+    ctx.globalAlpha = 1;
   }
 
+  resize();
+  window.addEventListener('resize', resize);
   requestAnimationFrame(frame);
-  setTimeout(function(){ canvas.classList.add('loaded'); }, 150);
-});
+  setTimeout(function () { canvas.classList.add('loaded'); }, 150);
+}());
 </script>
 
 <script>
@@ -211,8 +213,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     if (!btn || btn === document.documentElement) return;
     var r = btn.getBoundingClientRect();
-    document.documentElement.style.setProperty('--vt-x', (r.left + r.width / 2).toFixed(1) + 'px');
-    document.documentElement.style.setProperty('--vt-y', (r.top + r.height / 2).toFixed(1) + 'px');
+    document.documentElement.style.setProperty('--vt-x', (r.left + r.width  / 2).toFixed(1) + 'px');
+    document.documentElement.style.setProperty('--vt-y', (r.top  + r.height / 2).toFixed(1) + 'px');
     if (typeof document.startViewTransition === 'function') {
       e.stopImmediatePropagation();
       document.startViewTransition(function () {
